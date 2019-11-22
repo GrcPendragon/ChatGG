@@ -12,3 +12,17 @@ C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.exe
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.xml
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.pdb
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.Form1.resources
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\ChatGG.exe.config
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\ChatGG.exe
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\ChatGG.pdb
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\ChatGG.xml
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\MetroFramework.dll
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vbprojAssemblyReference.cache
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.Principal.resources
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.Resources.resources
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vbproj.GenerateResource.cache
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vbproj.CopyComplete
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.exe
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.xml
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.pdb
