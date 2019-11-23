@@ -11,7 +11,6 @@ C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vbproj.CopyCom
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.exe
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.xml
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.pdb
-C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.Form1.resources
 C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\ChatGG.exe.config
 C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\ChatGG.exe
 C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\ChatGG.pdb
@@ -26,3 +25,5 @@ C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vbproj.CopyCo
 C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.exe
 C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.xml
 C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.pdb
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.Principal.resources
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.Form1.resources
