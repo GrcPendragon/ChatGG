@@ -12,10 +12,12 @@
 
     End Sub
 
+    Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+
+    End Sub
     Private Sub btnCerrarVentana_Click(sender As Object, e As EventArgs) Handles btnCerrarVentana.Click
-
         Me.Close()
-
     End Sub
 
     Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
@@ -29,8 +31,6 @@
             btnMaximizar.Image = imgLstImagenes.Images(1)
 
         End If
-
-
     End Sub
 
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
@@ -47,21 +47,18 @@
         py = e.Y
         mover = True
     End Sub
-
+    Private Sub pnlSuperior_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlSuperior.MouseUp
+        mover = False
+    End Sub
     Private Sub btnAgregarUser_Click(sender As Object, e As EventArgs) Handles btnAgregarUser.Click
-        Dim f = New Form1()
+        Dim f = New vRegistro()
 
         f.TopLevel = False
         f.Parent = SplitContainer1.Panel2
         f.Show()
     End Sub
 
-    Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
 
-    Private Sub pnlSuperior_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlSuperior.MouseUp
 
-        mover = False
-    End Sub
 End Class

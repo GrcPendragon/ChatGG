@@ -1,2 +1,5 @@
-0A 78 93
-10 B4 DD
+10 AA C8 Active button
+10 B4 FF Hover Button
+C0 C0 C0 Back Color en areas Blancas
+0A 78 93 Back color PanelSuperior
+10 B4 DD Color principal
