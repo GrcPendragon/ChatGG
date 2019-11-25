@@ -49,6 +49,16 @@
     Private Sub pnlSuperior_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlSuperior.MouseUp
         mover = False
     End Sub
+
+    Private Sub btnAmigo_Click(sender As Object, e As EventArgs) Handles btnAmigo.Click
+        Dim f = New vChat()
+
+        f.TopLevel = False
+        f.Parent = SplitContainer1.Panel2
+        f.Show()
+        f.Dock = DockStyle.Fill
+    End Sub
+
     Private Sub btnAgregarUser_Click(sender As Object, e As EventArgs) Handles btnAgregarUser.Click
         'Dim f = New vRegistro()
 

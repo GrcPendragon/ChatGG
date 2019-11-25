@@ -93,6 +93,12 @@
     <Compile Include="vAddAmigo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vChat.Designer.vb">
+      <DependentUpon>vChat.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vChat.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vMiPerfil.Designer.vb">
       <DependentUpon>vMiPerfil.vb</DependentUpon>
     </Compile>
@@ -143,6 +149,9 @@
   <ItemGroup>
     <EmbeddedResource Include="vAddAmigo.resx">
       <DependentUpon>vAddAmigo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vChat.resx">
+      <DependentUpon>vChat.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vMiPerfil.resx">
       <DependentUpon>vMiPerfil.vb</DependentUpon>

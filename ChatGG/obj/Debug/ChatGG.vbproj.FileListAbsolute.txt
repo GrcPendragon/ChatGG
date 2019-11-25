@@ -31,3 +31,4 @@ C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vbprojAssembly
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vMiPerfil.resources
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vPerfilAmigo.resources
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vAddAmigo.resources
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vChat.resources
