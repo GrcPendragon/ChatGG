@@ -1,37 +1,18 @@
-﻿Public Class Principal
+﻿Public Class vPerfilAmigo
     Private px, py As Integer
     Private mover As Boolean = False
-
     Sub New()
 
         ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
 
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
-
-    End Sub
-
-    Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        vPerfilAmigo.Show()
+        'lblNombreCompleto.text =
+        'lblUser.text =
+        'imgAvatar.Image =
     End Sub
     Private Sub btnCerrarVentana_Click(sender As Object, e As EventArgs) Handles btnCerrarVentana.Click
         Me.Close()
     End Sub
-
-    Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
-        If Me.WindowState = FormWindowState.Normal Then
-
-            Me.WindowState = FormWindowState.Maximized
-            btnMaximizar.Image = imgLstImagenes.Images(0)
-
-        Else
-            Me.WindowState = FormWindowState.Normal
-            btnMaximizar.Image = imgLstImagenes.Images(1)
-
-        End If
-    End Sub
-
     Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
         Me.WindowState = FormWindowState.Minimized
     End Sub
@@ -49,15 +30,7 @@
     Private Sub pnlSuperior_MouseUp(sender As Object, e As MouseEventArgs) Handles pnlSuperior.MouseUp
         mover = False
     End Sub
-    Private Sub btnAgregarUser_Click(sender As Object, e As EventArgs) Handles btnAgregarUser.Click
-        Dim f = New vRegistro()
-
-        f.TopLevel = False
-        f.Parent = SplitContainer1.Panel2
-        f.Show()
+    Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        'Funcion eliminar amistad
     End Sub
-
-
-
-
 End Class

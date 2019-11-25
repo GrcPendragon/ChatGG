@@ -99,6 +99,12 @@
     <Compile Include="vInicioSesion.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vPerfilAmigo.Designer.vb">
+      <DependentUpon>vPerfilAmigo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vPerfilAmigo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vRegistro.Designer.vb">
       <DependentUpon>vRegistro.vb</DependentUpon>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vInicioSesion.resx">
       <DependentUpon>vInicioSesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vPerfilAmigo.resx">
+      <DependentUpon>vPerfilAmigo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vRegistro.resx">
       <DependentUpon>vRegistro.vb</DependentUpon>
