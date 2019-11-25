@@ -13,7 +13,7 @@
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        vPerfilAmigo.Show()
+        'La ventana que desees mostrar
     End Sub
     Private Sub btnCerrarVentana_Click(sender As Object, e As EventArgs) Handles btnCerrarVentana.Click
         Me.Close()
@@ -50,11 +50,12 @@
         mover = False
     End Sub
     Private Sub btnAgregarUser_Click(sender As Object, e As EventArgs) Handles btnAgregarUser.Click
-        Dim f = New vRegistro()
+        'Dim f = New vRegistro()
 
-        f.TopLevel = False
-        f.Parent = SplitContainer1.Panel2
-        f.Show()
+        'f.TopLevel = False
+        'f.Parent = SplitContainer1.Panel2
+        'f.Show()
+        vAddAmigo.ShowDialog()
     End Sub
 
 
