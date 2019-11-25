@@ -25,5 +25,6 @@ C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.exe
 C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.xml
 C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.pdb
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.Principal.resources
-C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vbprojAssemblyReference.cache
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vRegistro.resources
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vInicioSesion.resources
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vbprojAssemblyReference.cache

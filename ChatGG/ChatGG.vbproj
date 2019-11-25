@@ -87,6 +87,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="vInicioSesion.Designer.vb">
+      <DependentUpon>vInicioSesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vInicioSesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vRegistro.Designer.vb">
       <DependentUpon>vRegistro.vb</DependentUpon>
     </Compile>
@@ -117,6 +123,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="vInicioSesion.resx">
+      <DependentUpon>vInicioSesion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vRegistro.resx">
       <DependentUpon>vRegistro.vb</DependentUpon>
     </EmbeddedResource>
