@@ -28,3 +28,4 @@ C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.Principal.reso
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vRegistro.resources
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vInicioSesion.resources
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vbprojAssemblyReference.cache
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vMiPerfil.resources

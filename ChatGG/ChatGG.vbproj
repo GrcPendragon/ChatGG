@@ -87,6 +87,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="vMiPerfil.Designer.vb">
+      <DependentUpon>vMiPerfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vMiPerfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vInicioSesion.Designer.vb">
       <DependentUpon>vInicioSesion.vb</DependentUpon>
     </Compile>
@@ -123,6 +129,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="vMiPerfil.resx">
+      <DependentUpon>vMiPerfil.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vInicioSesion.resx">
       <DependentUpon>vInicioSesion.vb</DependentUpon>
     </EmbeddedResource>

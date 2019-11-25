@@ -34,6 +34,7 @@ Partial Class vInicioSesion
         Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.txtPass = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -137,6 +138,7 @@ Partial Class vInicioSesion
         '
         'MetroPanel1
         '
+        Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel1)
         Me.MetroPanel1.Controls.Add(Me.PictureBox1)
         Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel3)
         Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel2)
@@ -219,12 +221,23 @@ Partial Class vInicioSesion
         Me.txtUser.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUser.ForeColor = System.Drawing.Color.Black
         Me.txtUser.isPassword = False
-        Me.txtUser.Location = New System.Drawing.Point(54, 129)
+        Me.txtUser.Location = New System.Drawing.Point(75, 129)
         Me.txtUser.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(242, 35)
+        Me.txtUser.Size = New System.Drawing.Size(221, 35)
         Me.txtUser.TabIndex = 14
         Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'BunifuCustomLabel1
+        '
+        Me.BunifuCustomLabel1.AutoSize = True
+        Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Franklin Gothic Book", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(53, 129)
+        Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
+        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(25, 26)
+        Me.BunifuCustomLabel1.TabIndex = 21
+        Me.BunifuCustomLabel1.Text = "#"
         '
         'vInicioSesion
         '
@@ -257,4 +270,5 @@ Partial Class vInicioSesion
     Friend WithEvents txtPass As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents txtUser As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
 End Class

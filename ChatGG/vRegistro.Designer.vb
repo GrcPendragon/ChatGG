@@ -30,16 +30,16 @@ Partial Class vRegistro
         Me.btnAvatar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnRegistrar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
-        Me.txtNombre = New Bunifu.Framework.UI.BunifuMetroTextbox()
-        Me.txtApellidos = New Bunifu.Framework.UI.BunifuMetroTextbox()
-        Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
-        Me.txtPass = New Bunifu.Framework.UI.BunifuMetroTextbox()
-        Me.txtPassRepet = New Bunifu.Framework.UI.BunifuMetroTextbox()
-        Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel5 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.txtPassRepet = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.txtPass = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.txtApellidos = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.txtNombre = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -188,77 +188,60 @@ Partial Class vRegistro
         Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroPanel1.VerticalScrollbarSize = 10
         '
-        'txtNombre
+        'BunifuCustomLabel5
         '
-        Me.txtNombre.BackColor = System.Drawing.Color.White
-        Me.txtNombre.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtNombre.BorderColorIdle = System.Drawing.Color.Silver
-        Me.txtNombre.BorderColorMouseHover = System.Drawing.Color.Gray
-        Me.txtNombre.BorderThickness = 3
-        Me.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNombre.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.ForeColor = System.Drawing.Color.Black
-        Me.txtNombre.isPassword = False
-        Me.txtNombre.Location = New System.Drawing.Point(54, 169)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(242, 35)
-        Me.txtNombre.TabIndex = 12
-        Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BunifuCustomLabel5.AutoSize = True
+        Me.BunifuCustomLabel5.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomLabel5.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(53, 150)
+        Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
+        Me.BunifuCustomLabel5.Size = New System.Drawing.Size(69, 15)
+        Me.BunifuCustomLabel5.TabIndex = 21
+        Me.BunifuCustomLabel5.Text = "Nombre(s):"
         '
-        'txtApellidos
+        'BunifuCustomLabel4
         '
-        Me.txtApellidos.BackColor = System.Drawing.Color.White
-        Me.txtApellidos.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtApellidos.BorderColorIdle = System.Drawing.Color.Silver
-        Me.txtApellidos.BorderColorMouseHover = System.Drawing.Color.Gray
-        Me.txtApellidos.BorderThickness = 3
-        Me.txtApellidos.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtApellidos.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtApellidos.ForeColor = System.Drawing.Color.Black
-        Me.txtApellidos.isPassword = False
-        Me.txtApellidos.Location = New System.Drawing.Point(54, 227)
-        Me.txtApellidos.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtApellidos.Name = "txtApellidos"
-        Me.txtApellidos.Size = New System.Drawing.Size(242, 35)
-        Me.txtApellidos.TabIndex = 13
-        Me.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BunifuCustomLabel4.AutoSize = True
+        Me.BunifuCustomLabel4.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomLabel4.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(53, 208)
+        Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
+        Me.BunifuCustomLabel4.Size = New System.Drawing.Size(72, 15)
+        Me.BunifuCustomLabel4.TabIndex = 20
+        Me.BunifuCustomLabel4.Text = "Apellido(s):"
         '
-        'txtUser
+        'BunifuCustomLabel3
         '
-        Me.txtUser.BackColor = System.Drawing.Color.White
-        Me.txtUser.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtUser.BorderColorIdle = System.Drawing.Color.Silver
-        Me.txtUser.BorderColorMouseHover = System.Drawing.Color.Gray
-        Me.txtUser.BorderThickness = 3
-        Me.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtUser.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUser.ForeColor = System.Drawing.Color.Black
-        Me.txtUser.isPassword = False
-        Me.txtUser.Location = New System.Drawing.Point(54, 285)
-        Me.txtUser.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(242, 35)
-        Me.txtUser.TabIndex = 14
-        Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BunifuCustomLabel3.AutoSize = True
+        Me.BunifuCustomLabel3.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(53, 266)
+        Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
+        Me.BunifuCustomLabel3.Size = New System.Drawing.Size(55, 15)
+        Me.BunifuCustomLabel3.TabIndex = 19
+        Me.BunifuCustomLabel3.Text = "Usuario:"
         '
-        'txtPass
+        'BunifuCustomLabel2
         '
-        Me.txtPass.BackColor = System.Drawing.Color.White
-        Me.txtPass.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtPass.BorderColorIdle = System.Drawing.Color.Silver
-        Me.txtPass.BorderColorMouseHover = System.Drawing.Color.Gray
-        Me.txtPass.BorderThickness = 3
-        Me.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtPass.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtPass.ForeColor = System.Drawing.Color.Black
-        Me.txtPass.isPassword = True
-        Me.txtPass.Location = New System.Drawing.Point(54, 343)
-        Me.txtPass.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(242, 35)
-        Me.txtPass.TabIndex = 15
-        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.BunifuCustomLabel2.AutoSize = True
+        Me.BunifuCustomLabel2.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomLabel2.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(53, 324)
+        Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
+        Me.BunifuCustomLabel2.Size = New System.Drawing.Size(79, 15)
+        Me.BunifuCustomLabel2.TabIndex = 18
+        Me.BunifuCustomLabel2.Text = "Contraseña: "
+        '
+        'BunifuCustomLabel1
+        '
+        Me.BunifuCustomLabel1.AutoSize = True
+        Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(53, 382)
+        Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
+        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(124, 15)
+        Me.BunifuCustomLabel1.TabIndex = 17
+        Me.BunifuCustomLabel1.Text = "Repetir contraseña: "
         '
         'txtPassRepet
         '
@@ -278,55 +261,77 @@ Partial Class vRegistro
         Me.txtPassRepet.TabIndex = 16
         Me.txtPassRepet.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'BunifuCustomLabel1
+        'txtPass
         '
-        Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(53, 382)
-        Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
-        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(124, 15)
-        Me.BunifuCustomLabel1.TabIndex = 17
-        Me.BunifuCustomLabel1.Text = "Repetir contraseña: "
+        Me.txtPass.BackColor = System.Drawing.Color.White
+        Me.txtPass.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtPass.BorderColorIdle = System.Drawing.Color.Silver
+        Me.txtPass.BorderColorMouseHover = System.Drawing.Color.Gray
+        Me.txtPass.BorderThickness = 3
+        Me.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtPass.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtPass.ForeColor = System.Drawing.Color.Black
+        Me.txtPass.isPassword = True
+        Me.txtPass.Location = New System.Drawing.Point(54, 343)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(242, 35)
+        Me.txtPass.TabIndex = 15
+        Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'BunifuCustomLabel2
+        'txtUser
         '
-        Me.BunifuCustomLabel2.AutoSize = True
-        Me.BunifuCustomLabel2.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(53, 324)
-        Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
-        Me.BunifuCustomLabel2.Size = New System.Drawing.Size(79, 15)
-        Me.BunifuCustomLabel2.TabIndex = 18
-        Me.BunifuCustomLabel2.Text = "Contraseña: "
+        Me.txtUser.BackColor = System.Drawing.Color.White
+        Me.txtUser.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtUser.BorderColorIdle = System.Drawing.Color.Silver
+        Me.txtUser.BorderColorMouseHover = System.Drawing.Color.Gray
+        Me.txtUser.BorderThickness = 3
+        Me.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUser.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUser.ForeColor = System.Drawing.Color.Black
+        Me.txtUser.isPassword = False
+        Me.txtUser.Location = New System.Drawing.Point(54, 285)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(242, 35)
+        Me.txtUser.TabIndex = 14
+        Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'BunifuCustomLabel3
+        'txtApellidos
         '
-        Me.BunifuCustomLabel3.AutoSize = True
-        Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(53, 266)
-        Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
-        Me.BunifuCustomLabel3.Size = New System.Drawing.Size(55, 15)
-        Me.BunifuCustomLabel3.TabIndex = 19
-        Me.BunifuCustomLabel3.Text = "Usuario:"
+        Me.txtApellidos.BackColor = System.Drawing.Color.White
+        Me.txtApellidos.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtApellidos.BorderColorIdle = System.Drawing.Color.Silver
+        Me.txtApellidos.BorderColorMouseHover = System.Drawing.Color.Gray
+        Me.txtApellidos.BorderThickness = 3
+        Me.txtApellidos.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtApellidos.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtApellidos.ForeColor = System.Drawing.Color.Black
+        Me.txtApellidos.isPassword = False
+        Me.txtApellidos.Location = New System.Drawing.Point(54, 227)
+        Me.txtApellidos.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtApellidos.Name = "txtApellidos"
+        Me.txtApellidos.Size = New System.Drawing.Size(242, 35)
+        Me.txtApellidos.TabIndex = 13
+        Me.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'BunifuCustomLabel4
+        'txtNombre
         '
-        Me.BunifuCustomLabel4.AutoSize = True
-        Me.BunifuCustomLabel4.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(53, 208)
-        Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
-        Me.BunifuCustomLabel4.Size = New System.Drawing.Size(72, 15)
-        Me.BunifuCustomLabel4.TabIndex = 20
-        Me.BunifuCustomLabel4.Text = "Apellido(s):"
-        '
-        'BunifuCustomLabel5
-        '
-        Me.BunifuCustomLabel5.AutoSize = True
-        Me.BunifuCustomLabel5.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(53, 150)
-        Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
-        Me.BunifuCustomLabel5.Size = New System.Drawing.Size(69, 15)
-        Me.BunifuCustomLabel5.TabIndex = 21
-        Me.BunifuCustomLabel5.Text = "Nombre(s):"
+        Me.txtNombre.BackColor = System.Drawing.Color.White
+        Me.txtNombre.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtNombre.BorderColorIdle = System.Drawing.Color.Silver
+        Me.txtNombre.BorderColorMouseHover = System.Drawing.Color.Gray
+        Me.txtNombre.BorderThickness = 3
+        Me.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtNombre.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtNombre.ForeColor = System.Drawing.Color.Black
+        Me.txtNombre.isPassword = False
+        Me.txtNombre.Location = New System.Drawing.Point(54, 169)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(242, 35)
+        Me.txtNombre.TabIndex = 12
+        Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'vRegistro
         '
