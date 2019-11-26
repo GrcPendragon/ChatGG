@@ -26,24 +26,28 @@ Partial Class Principal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Principal))
         Me.pnlSuperior = New System.Windows.Forms.Panel()
         Me.lblTitulo = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.imgLstImagenes = New System.Windows.Forms.ImageList(Me.components)
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.pnl1 = New System.Windows.Forms.Panel()
-        Me.pnlAmigos = New System.Windows.Forms.Panel()
-        Me.txtBuscarUser = New Bunifu.Framework.UI.BunifuMaterialTextbox()
-        Me.Separator = New Bunifu.Framework.UI.BunifuSeparator()
-        Me.pnlConectados = New System.Windows.Forms.Panel()
-        Me.lblAmigos = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btnAmigo = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btnRecargar = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.btnAgregarUser = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.btnPerfil = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.imgLogo = New System.Windows.Forms.PictureBox()
         Me.btnMinimizar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnMaximizar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnCerrarVentana = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.imgLstImagenes = New System.Windows.Forms.ImageList(Me.components)
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.pnl1 = New System.Windows.Forms.Panel()
+        Me.pnlAmigos = New System.Windows.Forms.Panel()
+        Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btnAmigo = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.txtBuscarUser = New Bunifu.Framework.UI.BunifuMaterialTextbox()
+        Me.Separator = New Bunifu.Framework.UI.BunifuSeparator()
+        Me.pnlConectados = New System.Windows.Forms.Panel()
+        Me.btnRecargar = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.btnAgregarUser = New Bunifu.Framework.UI.BunifuImageButton()
+        Me.lblAmigos = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.btnPerfil = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.pnlSuperior.SuspendLayout()
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -52,10 +56,6 @@ Partial Class Principal
         Me.pnlConectados.SuspendLayout()
         CType(Me.btnRecargar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAgregarUser, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlSuperior
@@ -84,6 +84,66 @@ Partial Class Principal
         Me.lblTitulo.TabIndex = 1
         Me.lblTitulo.Text = "CHAT GG"
         Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'imgLogo
+        '
+        Me.imgLogo.Image = CType(resources.GetObject("imgLogo.Image"), System.Drawing.Image)
+        Me.imgLogo.Location = New System.Drawing.Point(0, 0)
+        Me.imgLogo.Margin = New System.Windows.Forms.Padding(0)
+        Me.imgLogo.Name = "imgLogo"
+        Me.imgLogo.Size = New System.Drawing.Size(50, 50)
+        Me.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgLogo.TabIndex = 4
+        Me.imgLogo.TabStop = False
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
+        Me.btnMinimizar.ImageActive = Nothing
+        Me.btnMinimizar.InitialImage = Nothing
+        Me.btnMinimizar.Location = New System.Drawing.Point(695, 0)
+        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(35, 35)
+        Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnMinimizar.TabIndex = 3
+        Me.btnMinimizar.TabStop = False
+        Me.btnMinimizar.Zoom = 10
+        '
+        'btnMaximizar
+        '
+        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMaximizar.Image = CType(resources.GetObject("btnMaximizar.Image"), System.Drawing.Image)
+        Me.btnMaximizar.ImageActive = Nothing
+        Me.btnMaximizar.InitialImage = Nothing
+        Me.btnMaximizar.Location = New System.Drawing.Point(730, 0)
+        Me.btnMaximizar.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnMaximizar.Name = "btnMaximizar"
+        Me.btnMaximizar.Size = New System.Drawing.Size(35, 35)
+        Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnMaximizar.TabIndex = 2
+        Me.btnMaximizar.TabStop = False
+        Me.btnMaximizar.Zoom = 10
+        '
+        'btnCerrarVentana
+        '
+        Me.btnCerrarVentana.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrarVentana.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.btnCerrarVentana.Image = CType(resources.GetObject("btnCerrarVentana.Image"), System.Drawing.Image)
+        Me.btnCerrarVentana.ImageActive = Nothing
+        Me.btnCerrarVentana.Location = New System.Drawing.Point(765, 0)
+        Me.btnCerrarVentana.Margin = New System.Windows.Forms.Padding(0)
+        Me.btnCerrarVentana.Name = "btnCerrarVentana"
+        Me.btnCerrarVentana.Size = New System.Drawing.Size(35, 35)
+        Me.btnCerrarVentana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnCerrarVentana.TabIndex = 1
+        Me.btnCerrarVentana.TabStop = False
+        Me.btnCerrarVentana.Zoom = 10
         '
         'imgLstImagenes
         '
@@ -136,67 +196,6 @@ Partial Class Principal
         Me.pnlAmigos.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
         Me.pnlAmigos.Size = New System.Drawing.Size(220, 365)
         Me.pnlAmigos.TabIndex = 7
-        '
-        'txtBuscarUser
-        '
-        Me.txtBuscarUser.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtBuscarUser.Dock = System.Windows.Forms.DockStyle.Top
-        Me.txtBuscarUser.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBuscarUser.ForeColor = System.Drawing.Color.White
-        Me.txtBuscarUser.HintForeColor = System.Drawing.Color.White
-        Me.txtBuscarUser.HintText = "Buscar"
-        Me.txtBuscarUser.isPassword = False
-        Me.txtBuscarUser.LineFocusedColor = System.Drawing.Color.Silver
-        Me.txtBuscarUser.LineIdleColor = System.Drawing.Color.White
-        Me.txtBuscarUser.LineMouseHoverColor = System.Drawing.Color.Silver
-        Me.txtBuscarUser.LineThickness = 2
-        Me.txtBuscarUser.Location = New System.Drawing.Point(5, 10)
-        Me.txtBuscarUser.Margin = New System.Windows.Forms.Padding(0)
-        Me.txtBuscarUser.Name = "txtBuscarUser"
-        Me.txtBuscarUser.Size = New System.Drawing.Size(220, 30)
-        Me.txtBuscarUser.TabIndex = 6
-        Me.txtBuscarUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
-        '
-        'Separator
-        '
-        Me.Separator.BackColor = System.Drawing.Color.Transparent
-        Me.Separator.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Separator.LineColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Separator.LineThickness = 1
-        Me.Separator.Location = New System.Drawing.Point(5, 0)
-        Me.Separator.Name = "Separator"
-        Me.Separator.Size = New System.Drawing.Size(220, 10)
-        Me.Separator.TabIndex = 5
-        Me.Separator.Transparency = 255
-        Me.Separator.Vertical = False
-        '
-        'pnlConectados
-        '
-        Me.pnlConectados.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.pnlConectados.Controls.Add(Me.btnRecargar)
-        Me.pnlConectados.Controls.Add(Me.btnAgregarUser)
-        Me.pnlConectados.Controls.Add(Me.lblAmigos)
-        Me.pnlConectados.Dock = System.Windows.Forms.DockStyle.Top
-        Me.pnlConectados.Location = New System.Drawing.Point(0, 90)
-        Me.pnlConectados.Margin = New System.Windows.Forms.Padding(0)
-        Me.pnlConectados.Name = "pnlConectados"
-        Me.pnlConectados.Padding = New System.Windows.Forms.Padding(0, 5, 5, 5)
-        Me.pnlConectados.Size = New System.Drawing.Size(230, 50)
-        Me.pnlConectados.TabIndex = 2
-        '
-        'lblAmigos
-        '
-        Me.lblAmigos.Dock = System.Windows.Forms.DockStyle.Left
-        Me.lblAmigos.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAmigos.ForeColor = System.Drawing.Color.White
-        Me.lblAmigos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.lblAmigos.Location = New System.Drawing.Point(0, 5)
-        Me.lblAmigos.Name = "lblAmigos"
-        Me.lblAmigos.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.lblAmigos.Size = New System.Drawing.Size(125, 40)
-        Me.lblAmigos.TabIndex = 0
-        Me.lblAmigos.Text = "Conectados: "
-        Me.lblAmigos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'BunifuFlatButton1
         '
@@ -268,6 +267,53 @@ Partial Class Principal
         Me.btnAmigo.Textcolor = System.Drawing.Color.Black
         Me.btnAmigo.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'txtBuscarUser
+        '
+        Me.txtBuscarUser.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtBuscarUser.Dock = System.Windows.Forms.DockStyle.Top
+        Me.txtBuscarUser.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscarUser.ForeColor = System.Drawing.Color.White
+        Me.txtBuscarUser.HintForeColor = System.Drawing.Color.White
+        Me.txtBuscarUser.HintText = "Buscar"
+        Me.txtBuscarUser.isPassword = False
+        Me.txtBuscarUser.LineFocusedColor = System.Drawing.Color.Silver
+        Me.txtBuscarUser.LineIdleColor = System.Drawing.Color.White
+        Me.txtBuscarUser.LineMouseHoverColor = System.Drawing.Color.Silver
+        Me.txtBuscarUser.LineThickness = 2
+        Me.txtBuscarUser.Location = New System.Drawing.Point(5, 10)
+        Me.txtBuscarUser.Margin = New System.Windows.Forms.Padding(0)
+        Me.txtBuscarUser.Name = "txtBuscarUser"
+        Me.txtBuscarUser.Size = New System.Drawing.Size(220, 30)
+        Me.txtBuscarUser.TabIndex = 6
+        Me.txtBuscarUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        '
+        'Separator
+        '
+        Me.Separator.BackColor = System.Drawing.Color.Transparent
+        Me.Separator.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Separator.LineColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Separator.LineThickness = 1
+        Me.Separator.Location = New System.Drawing.Point(5, 0)
+        Me.Separator.Name = "Separator"
+        Me.Separator.Size = New System.Drawing.Size(220, 10)
+        Me.Separator.TabIndex = 5
+        Me.Separator.Transparency = 255
+        Me.Separator.Vertical = False
+        '
+        'pnlConectados
+        '
+        Me.pnlConectados.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.pnlConectados.Controls.Add(Me.btnRecargar)
+        Me.pnlConectados.Controls.Add(Me.btnAgregarUser)
+        Me.pnlConectados.Controls.Add(Me.lblAmigos)
+        Me.pnlConectados.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlConectados.Location = New System.Drawing.Point(0, 90)
+        Me.pnlConectados.Margin = New System.Windows.Forms.Padding(0)
+        Me.pnlConectados.Name = "pnlConectados"
+        Me.pnlConectados.Padding = New System.Windows.Forms.Padding(0, 5, 5, 5)
+        Me.pnlConectados.Size = New System.Drawing.Size(230, 50)
+        Me.pnlConectados.TabIndex = 2
+        '
         'btnRecargar
         '
         Me.btnRecargar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -300,6 +346,20 @@ Partial Class Principal
         Me.btnAgregarUser.TabIndex = 3
         Me.btnAgregarUser.TabStop = False
         Me.btnAgregarUser.Zoom = 10
+        '
+        'lblAmigos
+        '
+        Me.lblAmigos.Dock = System.Windows.Forms.DockStyle.Left
+        Me.lblAmigos.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAmigos.ForeColor = System.Drawing.Color.White
+        Me.lblAmigos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.lblAmigos.Location = New System.Drawing.Point(0, 5)
+        Me.lblAmigos.Name = "lblAmigos"
+        Me.lblAmigos.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.lblAmigos.Size = New System.Drawing.Size(125, 40)
+        Me.lblAmigos.TabIndex = 0
+        Me.lblAmigos.Text = "Conectados: "
+        Me.lblAmigos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnPerfil
         '
@@ -337,66 +397,6 @@ Partial Class Principal
         Me.btnPerfil.Textcolor = System.Drawing.Color.White
         Me.btnPerfil.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'imgLogo
-        '
-        Me.imgLogo.Image = CType(resources.GetObject("imgLogo.Image"), System.Drawing.Image)
-        Me.imgLogo.Location = New System.Drawing.Point(0, 0)
-        Me.imgLogo.Margin = New System.Windows.Forms.Padding(0)
-        Me.imgLogo.Name = "imgLogo"
-        Me.imgLogo.Size = New System.Drawing.Size(50, 50)
-        Me.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgLogo.TabIndex = 4
-        Me.imgLogo.TabStop = False
-        '
-        'btnMinimizar
-        '
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(147, Byte), Integer))
-        Me.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
-        Me.btnMinimizar.ImageActive = Nothing
-        Me.btnMinimizar.InitialImage = Nothing
-        Me.btnMinimizar.Location = New System.Drawing.Point(695, 0)
-        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(35, 35)
-        Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnMinimizar.TabIndex = 3
-        Me.btnMinimizar.TabStop = False
-        Me.btnMinimizar.Zoom = 10
-        '
-        'btnMaximizar
-        '
-        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMaximizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(147, Byte), Integer))
-        Me.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMaximizar.Image = CType(resources.GetObject("btnMaximizar.Image"), System.Drawing.Image)
-        Me.btnMaximizar.ImageActive = Nothing
-        Me.btnMaximizar.InitialImage = Nothing
-        Me.btnMaximizar.Location = New System.Drawing.Point(730, 0)
-        Me.btnMaximizar.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnMaximizar.Name = "btnMaximizar"
-        Me.btnMaximizar.Size = New System.Drawing.Size(35, 35)
-        Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnMaximizar.TabIndex = 2
-        Me.btnMaximizar.TabStop = False
-        Me.btnMaximizar.Zoom = 10
-        '
-        'btnCerrarVentana
-        '
-        Me.btnCerrarVentana.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrarVentana.BackColor = System.Drawing.Color.FromArgb(CType(CType(10, Byte), Integer), CType(CType(120, Byte), Integer), CType(CType(147, Byte), Integer))
-        Me.btnCerrarVentana.Image = CType(resources.GetObject("btnCerrarVentana.Image"), System.Drawing.Image)
-        Me.btnCerrarVentana.ImageActive = Nothing
-        Me.btnCerrarVentana.Location = New System.Drawing.Point(765, 0)
-        Me.btnCerrarVentana.Margin = New System.Windows.Forms.Padding(0)
-        Me.btnCerrarVentana.Name = "btnCerrarVentana"
-        Me.btnCerrarVentana.Size = New System.Drawing.Size(35, 35)
-        Me.btnCerrarVentana.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnCerrarVentana.TabIndex = 1
-        Me.btnCerrarVentana.TabStop = False
-        Me.btnCerrarVentana.Zoom = 10
-        '
         'Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -415,6 +415,10 @@ Partial Class Principal
         Me.Name = "Principal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.pnlSuperior.ResumeLayout(False)
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
@@ -423,10 +427,6 @@ Partial Class Principal
         Me.pnlConectados.ResumeLayout(False)
         CType(Me.btnRecargar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAgregarUser, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

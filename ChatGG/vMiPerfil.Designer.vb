@@ -227,7 +227,7 @@ Partial Class vMiPerfil
         Me.btnAvatar.Margin = New System.Windows.Forms.Padding(25, 25, 3, 20)
         Me.btnAvatar.Name = "btnAvatar"
         Me.btnAvatar.Size = New System.Drawing.Size(80, 80)
-        Me.btnAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.btnAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.btnAvatar.TabIndex = 27
         Me.btnAvatar.TabStop = False
         Me.btnAvatar.Zoom = 10

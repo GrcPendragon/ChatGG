@@ -24,16 +24,16 @@ Partial Class vChat
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vChat))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtMensaje = New System.Windows.Forms.TextBox()
-        Me.btnEnviar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.imgAmigo = New System.Windows.Forms.PictureBox()
         Me.lblAmigo = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.imgAmigo = New System.Windows.Forms.PictureBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnEnviar = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.txtMensaje = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.imgAmigo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -48,6 +48,40 @@ Partial Class vChat
         Me.Panel1.Size = New System.Drawing.Size(800, 600)
         Me.Panel1.TabIndex = 0
         '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.lblAmigo)
+        Me.Panel3.Controls.Add(Me.imgAmigo)
+        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Padding = New System.Windows.Forms.Padding(5)
+        Me.Panel3.Size = New System.Drawing.Size(800, 50)
+        Me.Panel3.TabIndex = 2
+        '
+        'lblAmigo
+        '
+        Me.lblAmigo.AutoSize = True
+        Me.lblAmigo.Font = New System.Drawing.Font("Franklin Gothic Book", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAmigo.Location = New System.Drawing.Point(51, 15)
+        Me.lblAmigo.Margin = New System.Windows.Forms.Padding(3, 15, 0, 15)
+        Me.lblAmigo.Name = "lblAmigo"
+        Me.lblAmigo.Size = New System.Drawing.Size(54, 20)
+        Me.lblAmigo.TabIndex = 1
+        Me.lblAmigo.Text = "Lupita"
+        '
+        'imgAmigo
+        '
+        Me.imgAmigo.Dock = System.Windows.Forms.DockStyle.Left
+        Me.imgAmigo.Image = CType(resources.GetObject("imgAmigo.Image"), System.Drawing.Image)
+        Me.imgAmigo.Location = New System.Drawing.Point(5, 5)
+        Me.imgAmigo.Name = "imgAmigo"
+        Me.imgAmigo.Size = New System.Drawing.Size(40, 40)
+        Me.imgAmigo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.imgAmigo.TabIndex = 0
+        Me.imgAmigo.TabStop = False
+        '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
@@ -59,18 +93,6 @@ Partial Class vChat
         Me.Panel2.Padding = New System.Windows.Forms.Padding(10)
         Me.Panel2.Size = New System.Drawing.Size(800, 100)
         Me.Panel2.TabIndex = 1
-        '
-        'txtMensaje
-        '
-        Me.txtMensaje.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtMensaje.BackColor = System.Drawing.Color.White
-        Me.txtMensaje.Font = New System.Drawing.Font("Franklin Gothic Book", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtMensaje.Location = New System.Drawing.Point(13, 12)
-        Me.txtMensaje.Multiline = True
-        Me.txtMensaje.Name = "txtMensaje"
-        Me.txtMensaje.Size = New System.Drawing.Size(691, 75)
-        Me.txtMensaje.TabIndex = 0
         '
         'btnEnviar
         '
@@ -106,39 +128,17 @@ Partial Class vChat
         Me.btnEnviar.Textcolor = System.Drawing.Color.White
         Me.btnEnviar.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'Panel3
+        'txtMensaje
         '
-        Me.Panel3.BackColor = System.Drawing.Color.White
-        Me.Panel3.Controls.Add(Me.lblAmigo)
-        Me.Panel3.Controls.Add(Me.imgAmigo)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Padding = New System.Windows.Forms.Padding(5)
-        Me.Panel3.Size = New System.Drawing.Size(800, 50)
-        Me.Panel3.TabIndex = 2
-        '
-        'imgAmigo
-        '
-        Me.imgAmigo.Dock = System.Windows.Forms.DockStyle.Left
-        Me.imgAmigo.Image = CType(resources.GetObject("imgAmigo.Image"), System.Drawing.Image)
-        Me.imgAmigo.Location = New System.Drawing.Point(5, 5)
-        Me.imgAmigo.Name = "imgAmigo"
-        Me.imgAmigo.Size = New System.Drawing.Size(40, 40)
-        Me.imgAmigo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.imgAmigo.TabIndex = 0
-        Me.imgAmigo.TabStop = False
-        '
-        'lblAmigo
-        '
-        Me.lblAmigo.AutoSize = True
-        Me.lblAmigo.Font = New System.Drawing.Font("Franklin Gothic Book", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAmigo.Location = New System.Drawing.Point(51, 15)
-        Me.lblAmigo.Margin = New System.Windows.Forms.Padding(3, 15, 0, 15)
-        Me.lblAmigo.Name = "lblAmigo"
-        Me.lblAmigo.Size = New System.Drawing.Size(54, 20)
-        Me.lblAmigo.TabIndex = 1
-        Me.lblAmigo.Text = "Lupita"
+        Me.txtMensaje.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtMensaje.BackColor = System.Drawing.Color.White
+        Me.txtMensaje.Font = New System.Drawing.Font("Franklin Gothic Book", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtMensaje.Location = New System.Drawing.Point(13, 12)
+        Me.txtMensaje.Multiline = True
+        Me.txtMensaje.Name = "txtMensaje"
+        Me.txtMensaje.Size = New System.Drawing.Size(691, 75)
+        Me.txtMensaje.TabIndex = 0
         '
         'vChat
         '
@@ -152,11 +152,11 @@ Partial Class vChat
         Me.Name = "vChat"
         Me.Text = "vChat"
         Me.Panel1.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         CType(Me.imgAmigo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

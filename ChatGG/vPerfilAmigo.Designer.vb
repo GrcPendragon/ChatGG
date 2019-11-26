@@ -116,6 +116,7 @@ Partial Class vPerfilAmigo
         Me.imgAvatar.Location = New System.Drawing.Point(34, 25)
         Me.imgAvatar.Name = "imgAvatar"
         Me.imgAvatar.Size = New System.Drawing.Size(80, 80)
+        Me.imgAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.imgAvatar.TabIndex = 34
         Me.imgAvatar.TabStop = False
         '
