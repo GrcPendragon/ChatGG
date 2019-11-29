@@ -27,14 +27,14 @@ Partial Class vInicioSesion
         Me.lblTitulo = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.btnMinimizar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnCerrarVentana = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.btnRegistrar = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btnIniciarSesion = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
+        Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.txtPass = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
-        Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,41 +100,41 @@ Partial Class vInicioSesion
         Me.btnCerrarVentana.TabStop = False
         Me.btnCerrarVentana.Zoom = 10
         '
-        'btnRegistrar
+        'btnIniciarSesion
         '
-        Me.btnRegistrar.Activecolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(200, Byte), Integer))
-        Me.btnRegistrar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.btnIniciarSesion.Activecolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.btnIniciarSesion.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.btnRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnRegistrar.BorderRadius = 0
-        Me.btnRegistrar.ButtonText = "Inicar sesión"
-        Me.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnRegistrar.DisabledColor = System.Drawing.Color.Gray
-        Me.btnRegistrar.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnRegistrar.Iconimage = Nothing
-        Me.btnRegistrar.Iconimage_right = Nothing
-        Me.btnRegistrar.Iconimage_right_Selected = Nothing
-        Me.btnRegistrar.Iconimage_Selected = Nothing
-        Me.btnRegistrar.IconMarginLeft = 0
-        Me.btnRegistrar.IconMarginRight = 0
-        Me.btnRegistrar.IconRightVisible = True
-        Me.btnRegistrar.IconRightZoom = 0R
-        Me.btnRegistrar.IconVisible = True
-        Me.btnRegistrar.IconZoom = 90.0R
-        Me.btnRegistrar.IsTab = False
-        Me.btnRegistrar.Location = New System.Drawing.Point(120, 242)
-        Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.btnRegistrar.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnRegistrar.OnHoverTextColor = System.Drawing.Color.White
-        Me.btnRegistrar.selected = False
-        Me.btnRegistrar.Size = New System.Drawing.Size(90, 30)
-        Me.btnRegistrar.TabIndex = 4
-        Me.btnRegistrar.Text = "Inicar sesión"
-        Me.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnRegistrar.Textcolor = System.Drawing.Color.White
-        Me.btnRegistrar.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.btnIniciarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnIniciarSesion.BorderRadius = 0
+        Me.btnIniciarSesion.ButtonText = "Inicar sesión"
+        Me.btnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnIniciarSesion.DisabledColor = System.Drawing.Color.Gray
+        Me.btnIniciarSesion.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnIniciarSesion.Iconimage = Nothing
+        Me.btnIniciarSesion.Iconimage_right = Nothing
+        Me.btnIniciarSesion.Iconimage_right_Selected = Nothing
+        Me.btnIniciarSesion.Iconimage_Selected = Nothing
+        Me.btnIniciarSesion.IconMarginLeft = 0
+        Me.btnIniciarSesion.IconMarginRight = 0
+        Me.btnIniciarSesion.IconRightVisible = True
+        Me.btnIniciarSesion.IconRightZoom = 0R
+        Me.btnIniciarSesion.IconVisible = True
+        Me.btnIniciarSesion.IconZoom = 90.0R
+        Me.btnIniciarSesion.IsTab = False
+        Me.btnIniciarSesion.Location = New System.Drawing.Point(120, 242)
+        Me.btnIniciarSesion.Name = "btnIniciarSesion"
+        Me.btnIniciarSesion.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.btnIniciarSesion.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnIniciarSesion.OnHoverTextColor = System.Drawing.Color.White
+        Me.btnIniciarSesion.selected = False
+        Me.btnIniciarSesion.Size = New System.Drawing.Size(90, 30)
+        Me.btnIniciarSesion.TabIndex = 4
+        Me.btnIniciarSesion.Text = "Inicar sesión"
+        Me.btnIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnIniciarSesion.Textcolor = System.Drawing.Color.White
+        Me.btnIniciarSesion.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'MetroPanel1
         '
@@ -144,7 +144,7 @@ Partial Class vInicioSesion
         Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel2)
         Me.MetroPanel1.Controls.Add(Me.txtPass)
         Me.MetroPanel1.Controls.Add(Me.txtUser)
-        Me.MetroPanel1.Controls.Add(Me.btnRegistrar)
+        Me.MetroPanel1.Controls.Add(Me.btnIniciarSesion)
         Me.MetroPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MetroPanel1.HorizontalScrollbarBarColor = True
         Me.MetroPanel1.HorizontalScrollbarHighlightOnWheel = False
@@ -158,6 +158,17 @@ Partial Class vInicioSesion
         Me.MetroPanel1.VerticalScrollbarBarColor = True
         Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroPanel1.VerticalScrollbarSize = 10
+        '
+        'BunifuCustomLabel1
+        '
+        Me.BunifuCustomLabel1.AutoSize = True
+        Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Franklin Gothic Book", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(51, 129)
+        Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
+        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(25, 26)
+        Me.BunifuCustomLabel1.TabIndex = 21
+        Me.BunifuCustomLabel1.Text = "#"
         '
         'PictureBox1
         '
@@ -228,17 +239,6 @@ Partial Class vInicioSesion
         Me.txtUser.TabIndex = 14
         Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'BunifuCustomLabel1
-        '
-        Me.BunifuCustomLabel1.AutoSize = True
-        Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent
-        Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Franklin Gothic Book", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(53, 129)
-        Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
-        Me.BunifuCustomLabel1.Size = New System.Drawing.Size(25, 26)
-        Me.BunifuCustomLabel1.TabIndex = 21
-        Me.BunifuCustomLabel1.Text = "#"
-        '
         'vInicioSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -263,7 +263,7 @@ Partial Class vInicioSesion
     Friend WithEvents lblTitulo As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents btnMinimizar As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnCerrarVentana As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents btnRegistrar As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btnIniciarSesion As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents MetroPanel1 As MetroFramework.Controls.MetroPanel
     Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents BunifuCustomLabel2 As Bunifu.Framework.UI.BunifuCustomLabel

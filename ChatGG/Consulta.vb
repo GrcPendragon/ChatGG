@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class Consulta
     Private cadenaCon As String = "server=192.185.131.131;user=pandatec_grc;password=kirascorp9;database=pandatec_Chat;"
-    Private tabla As DataTable
+
     Private conexion As MySqlConnection
     Private adaptador As MySqlDataAdapter
 
@@ -20,7 +20,7 @@ Public Class Consulta
     End Sub
 
     Function seleccionar(sql As String) As DataTable
-        tabla = New DataTable
+        Dim tabla As New DataTable
 
         conexion.Open()
         adaptador.SelectCommand = conexion.CreateCommand

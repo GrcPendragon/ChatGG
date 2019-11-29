@@ -350,6 +350,7 @@ Partial Class vRegistro
         Me.Controls.Add(Me.pnlSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "vRegistro"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.pnlSuperior.ResumeLayout(False)
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).EndInit()

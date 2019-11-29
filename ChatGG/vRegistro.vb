@@ -3,25 +3,28 @@
 Public Class vRegistro
     Private px, py As Integer
     Private mover As Boolean = False
+    Private rutaImg As String
     Public nombre, apellidos, user, pass, sql As String
     Public avatar As Byte()
+
     Dim bd As Consulta
     Private Sub vRegistro_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         bd = New Consulta
     End Sub
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
         Dim binario As New MemoryStream
+        'MsgBox(Imaging.ImageFormat.Jpeg.ToString)
+        'btnAvatar.Image.Save(binario, btnAvatar.Image.RawFormat)
+        'avatar = binario.GetBuffer
         nombre = txtNombre.Text
         apellidos = txtApellidos.Text
         user = txtUser.Text
         pass = txtPass.Text
-        'MsgBox(Imaging.ImageFormat.Jpeg.ToString)
-        btnAvatar.Image.Save(binario, btnAvatar.Image.RawFormat)
-        avatar = binario.GetBuffer
+
         If txtPassRepet.Text = pass Then
             sql = "Select * from user where id = '" & user & "'"
             If bd.seleccionar(sql).Rows.Count = 0 Then
-                sql = "Insert into user values ('','" + nombre + "','" + apellidos + "','" + user + "','" + pass + "','?avatar',false)"
+                sql = "Insert into user values ('','" + nombre + "','" + apellidos + "','" + user + "','" + pass + "','" + rutaImg + "',false)"
                 bd.insertar(sql)
             Else
                 MsgBox("El usuario ya existe")
@@ -34,7 +37,8 @@ Public Class vRegistro
     Private Sub btnAvatar_Click(sender As Object, e As EventArgs) Handles btnAvatar.Click
         If opnImagen.ShowDialog = vbOK Then
             If opnImagen.FileName <> "" Then
-                btnAvatar.Image = Image.FromFile(opnImagen.FileName)
+                rutaImg = opnImagen.FileName
+                btnAvatar.Image = Image.FromFile(rutaImg)
             End If
         End If
     End Sub

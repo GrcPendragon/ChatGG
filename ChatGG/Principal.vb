@@ -1,19 +1,23 @@
 ﻿Public Class Principal
     Private px, py As Integer
     Private mover As Boolean = False
-
+    Private bd As New Consulta
+    Private nombre, apellidos, user, rutaImg, sql As String
+    Private tabla As New DataTable
     Sub New()
-
-        ' Esta llamada es exigida por el diseñador.
         InitializeComponent()
-
-        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
-
-
     End Sub
 
     Private Sub Principal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'La ventana que desees mostrar
+        Dim ventanaIni As New vInicioSesion
+        If ventanaIni.ShowDialog = vbCancel Then
+            Me.Close()
+        End If
+        Me.user = ventanaIni.user
+        sql = "Select * from user where user = '" & Me.user & "'"
+        tabla = bd.seleccionar(sql)
+        btnPerfil.Text = tabla(0).Item(1) & " " & tabla(0).Item(2)
     End Sub
     Private Sub btnCerrarVentana_Click(sender As Object, e As EventArgs) Handles btnCerrarVentana.Click
         Me.Close()

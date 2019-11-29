@@ -37,3 +37,14 @@ C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\Google.Protobuf.dll
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\Renci.SshNet.dll
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\MySql.Data.xml
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\MySql.Data.dll
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\Google.Protobuf.dll
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\Renci.SshNet.dll
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\bin\Debug\MySql.Data.xml
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vAddAmigo.resources
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vChat.resources
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vMiPerfil.resources
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vInicioSesion.resources
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vPerfilAmigo.resources
+C:\Users\Fausto Garcia\Documents\Proyectos\ChatGG\obj\Debug\ChatGG.vRegistro.resources

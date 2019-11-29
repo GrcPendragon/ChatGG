@@ -1,14 +1,17 @@
 ﻿Public Class vInicioSesion
     Private px, py As Integer
     Private mover As Boolean = False
-
-    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnRegistrar.Click
-        Dim user, pass As String
+    Private sql As String
+    Private bd As New Consulta
+    Public user As String
+    Private Sub btnIniciarSesion_Click(sender As Object, e As EventArgs) Handles btnIniciarSesion.Click
+        Dim pass As String
 
         user = txtUser.Text
         pass = txtPass.Text
-        If True Then 'Consulta
-
+        sql = "Select * from user where user = '" & user & "' and pass = '" & pass & "'"
+        If bd.seleccionar(sql).Rows.Count = 1 Then 'Consulta
+            Me.DialogResult = DialogResult.OK
         Else
             MsgBox("Usuario y/o contraseña incorrecos.")
         End If
@@ -32,6 +35,6 @@
         Me.WindowState = FormWindowState.Minimized
     End Sub
     Private Sub btnCerrarVentana_Click(sender As Object, e As EventArgs) Handles btnCerrarVentana.Click
-        Me.Close()
+        Me.DialogResult = DialogResult.Cancel
     End Sub
 End Class
