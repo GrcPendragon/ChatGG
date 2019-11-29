@@ -65,7 +65,8 @@
         'f.TopLevel = False
         'f.Parent = SplitContainer1.Panel2
         'f.Show()
-        vAddAmigo.ShowDialog()
+        'vAddAmigo.ShowDialog()
+        Dim f = New Consulta()
     End Sub
 
 

@@ -40,6 +40,7 @@ Partial Class vRegistro
         Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtApellidos = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtNombre = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.opnImagen = New System.Windows.Forms.OpenFileDialog()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -333,6 +334,11 @@ Partial Class vRegistro
         Me.txtNombre.TabIndex = 12
         Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
+        'opnImagen
+        '
+        Me.opnImagen.Filter = "Imagenes JPG|*.jpg|Imagenes PNG|*.png"
+        Me.opnImagen.Title = "Seleccionar imagen"
+        '
         'vRegistro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -371,4 +377,5 @@ Partial Class vRegistro
     Friend WithEvents txtPass As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents txtUser As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents txtApellidos As Bunifu.Framework.UI.BunifuMetroTextbox
+    Friend WithEvents opnImagen As OpenFileDialog
 End Class

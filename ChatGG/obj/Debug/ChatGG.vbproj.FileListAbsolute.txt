@@ -32,3 +32,8 @@ C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vMiPerfil.reso
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vPerfilAmigo.resources
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vAddAmigo.resources
 C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\obj\Debug\ChatGG.vChat.resources
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\MySql.Data.dll
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\Google.Protobuf.dll
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\Renci.SshNet.dll
+C:\Users\mg213\Documents\Proyectos\ChatGG\ChatGG\bin\Debug\MySql.Data.xml
