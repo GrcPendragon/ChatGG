@@ -38,6 +38,7 @@ Partial Class vMiPerfil
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.btnGuardar = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.opnImg = New System.Windows.Forms.OpenFileDialog()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,7 +150,6 @@ Partial Class vMiPerfil
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(168, 30)
         Me.txtPass.TabIndex = 32
-        Me.txtPass.Text = "1234"
         Me.txtPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'BunifuCustomLabel2
@@ -179,7 +179,6 @@ Partial Class vMiPerfil
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(125, 30)
         Me.txtApellidos.TabIndex = 30
-        Me.txtApellidos.Text = "Garcia"
         Me.txtApellidos.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'BunifuCustomLabel1
@@ -209,7 +208,6 @@ Partial Class vMiPerfil
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(125, 30)
         Me.txtNombre.TabIndex = 28
-        Me.txtNombre.Text = "Fausto"
         Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'btnAvatar
@@ -217,6 +215,7 @@ Partial Class vMiPerfil
         Me.btnAvatar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAvatar.BackColor = System.Drawing.Color.White
+        Me.btnAvatar.BackgroundImage = CType(resources.GetObject("btnAvatar.BackgroundImage"), System.Drawing.Image)
         Me.btnAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.btnAvatar.Cursor = System.Windows.Forms.Cursors.Hand
@@ -259,7 +258,6 @@ Partial Class vMiPerfil
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(168, 30)
         Me.txtUser.TabIndex = 25
-        Me.txtUser.Text = "#GrcFausto"
         Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'btnGuardar
@@ -300,6 +298,11 @@ Partial Class vMiPerfil
         Me.btnGuardar.Textcolor = System.Drawing.Color.White
         Me.btnGuardar.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
+        'opnImg
+        '
+        Me.opnImg.Filter = "Imagenes JPG|*.jpg|Imagenes PNG|*.png"
+        Me.opnImg.Title = "Cargar imagen"
+        '
         'vMiPerfil
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -310,6 +313,7 @@ Partial Class vMiPerfil
         Me.Controls.Add(Me.pnlSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "vMiPerfil"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Form1"
         Me.pnlSuperior.ResumeLayout(False)
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -336,4 +340,5 @@ Partial Class vMiPerfil
     Friend WithEvents btnGuardar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuCustomLabel4 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents txtPass As Bunifu.Framework.UI.BunifuMetroTextbox
+    Friend WithEvents opnImg As OpenFileDialog
 End Class

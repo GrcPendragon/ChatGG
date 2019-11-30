@@ -29,7 +29,7 @@ Partial Class vAddAmigo
         Me.btnCerrarVentana = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
-        Me.txtNombre = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.btnAgregar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,7 +99,7 @@ Partial Class vAddAmigo
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
         Me.Panel1.Controls.Add(Me.BunifuCustomLabel1)
-        Me.Panel1.Controls.Add(Me.txtNombre)
+        Me.Panel1.Controls.Add(Me.txtUser)
         Me.Panel1.Controls.Add(Me.btnAgregar)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 50)
@@ -119,24 +119,23 @@ Partial Class vAddAmigo
         Me.BunifuCustomLabel1.TabIndex = 31
         Me.BunifuCustomLabel1.Text = "Ingrese el usuario que desea agregar:"
         '
-        'txtNombre
+        'txtUser
         '
-        Me.txtNombre.BackColor = System.Drawing.Color.White
-        Me.txtNombre.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.txtNombre.BorderColorIdle = System.Drawing.Color.Silver
-        Me.txtNombre.BorderColorMouseHover = System.Drawing.Color.Gray
-        Me.txtNombre.BorderThickness = 3
-        Me.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtNombre.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtNombre.ForeColor = System.Drawing.Color.Black
-        Me.txtNombre.isPassword = False
-        Me.txtNombre.Location = New System.Drawing.Point(50, 44)
-        Me.txtNombre.Margin = New System.Windows.Forms.Padding(50, 25, 50, 25)
-        Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(308, 30)
-        Me.txtNombre.TabIndex = 30
-        Me.txtNombre.Text = "#"
-        Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
+        Me.txtUser.BackColor = System.Drawing.Color.White
+        Me.txtUser.BorderColorFocused = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.txtUser.BorderColorIdle = System.Drawing.Color.Silver
+        Me.txtUser.BorderColorMouseHover = System.Drawing.Color.Gray
+        Me.txtUser.BorderThickness = 3
+        Me.txtUser.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.txtUser.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtUser.ForeColor = System.Drawing.Color.Black
+        Me.txtUser.isPassword = False
+        Me.txtUser.Location = New System.Drawing.Point(50, 44)
+        Me.txtUser.Margin = New System.Windows.Forms.Padding(50, 25, 50, 25)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(308, 30)
+        Me.txtUser.TabIndex = 30
+        Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'btnAgregar
         '
@@ -185,6 +184,7 @@ Partial Class vAddAmigo
         Me.Controls.Add(Me.pnlSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "vAddAmigo"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Form1"
         Me.pnlSuperior.ResumeLayout(False)
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
@@ -201,5 +201,5 @@ Partial Class vAddAmigo
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnAgregar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
-    Friend WithEvents txtNombre As Bunifu.Framework.UI.BunifuMetroTextbox
+    Friend WithEvents txtUser As Bunifu.Framework.UI.BunifuMetroTextbox
 End Class

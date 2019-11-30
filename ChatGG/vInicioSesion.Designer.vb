@@ -35,6 +35,7 @@ Partial Class vInicioSesion
         Me.BunifuCustomLabel2 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.txtPass = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
+        Me.lblRegistro = New System.Windows.Forms.LinkLabel()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,7 +124,7 @@ Partial Class vInicioSesion
         Me.btnIniciarSesion.IconVisible = True
         Me.btnIniciarSesion.IconZoom = 90.0R
         Me.btnIniciarSesion.IsTab = False
-        Me.btnIniciarSesion.Location = New System.Drawing.Point(120, 242)
+        Me.btnIniciarSesion.Location = New System.Drawing.Point(115, 229)
         Me.btnIniciarSesion.Name = "btnIniciarSesion"
         Me.btnIniciarSesion.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.btnIniciarSesion.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -138,6 +139,7 @@ Partial Class vInicioSesion
         '
         'MetroPanel1
         '
+        Me.MetroPanel1.Controls.Add(Me.lblRegistro)
         Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel1)
         Me.MetroPanel1.Controls.Add(Me.PictureBox1)
         Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel3)
@@ -239,6 +241,20 @@ Partial Class vInicioSesion
         Me.txtUser.TabIndex = 14
         Me.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
+        'lblRegistro
+        '
+        Me.lblRegistro.ActiveLinkColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(200, Byte), Integer))
+        Me.lblRegistro.BackColor = System.Drawing.Color.Transparent
+        Me.lblRegistro.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblRegistro.LinkColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.lblRegistro.Location = New System.Drawing.Point(112, 262)
+        Me.lblRegistro.Name = "lblRegistro"
+        Me.lblRegistro.Size = New System.Drawing.Size(93, 23)
+        Me.lblRegistro.TabIndex = 22
+        Me.lblRegistro.TabStop = True
+        Me.lblRegistro.Text = "Registrarme"
+        Me.lblRegistro.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'vInicioSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -250,6 +266,7 @@ Partial Class vInicioSesion
         Me.Controls.Add(Me.pnlSuperior)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "vInicioSesion"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.pnlSuperior.ResumeLayout(False)
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).EndInit()
@@ -271,4 +288,5 @@ Partial Class vInicioSesion
     Friend WithEvents txtUser As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents lblRegistro As LinkLabel
 End Class

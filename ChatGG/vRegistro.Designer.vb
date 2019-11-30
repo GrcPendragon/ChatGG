@@ -41,6 +41,7 @@ Partial Class vRegistro
         Me.txtApellidos = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtNombre = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.opnImagen = New System.Windows.Forms.OpenFileDialog()
+        Me.savImg = New System.Windows.Forms.SaveFileDialog()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -379,4 +380,5 @@ Partial Class vRegistro
     Friend WithEvents txtUser As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents txtApellidos As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents opnImagen As OpenFileDialog
+    Friend WithEvents savImg As SaveFileDialog
 End Class
