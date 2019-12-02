@@ -60,11 +60,9 @@
             SplitContainer1.Panel2.Controls.Remove(ctrl)
             ctrl.Dispose()
         Next
-        If CType(sender, Bunifu.Framework.UI.BunifuFlatButton).Name = "x" Then
-            amigo = "x"
-        Else
-            amigo = "z"
-        End If
+
+        amigo = CType(sender, Bunifu.Framework.UI.BunifuFlatButton).Name
+
         Dim chat = New vChat(amigo, idYo)
 
         chat.TopLevel = False
