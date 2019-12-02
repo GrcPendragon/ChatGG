@@ -30,11 +30,10 @@ Partial Class Principal
         Me.btnMinimizar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnMaximizar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnCerrarVentana = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.imgLstImagenes = New System.Windows.Forms.ImageList(Me.components)
+        Me.lstImagenes = New System.Windows.Forms.ImageList(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.pnl1 = New System.Windows.Forms.Panel()
         Me.pnlAmigos = New System.Windows.Forms.Panel()
-        Me.btnAmigo = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.txtBuscarUser = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.Separator = New Bunifu.Framework.UI.BunifuSeparator()
         Me.pnlConectados = New System.Windows.Forms.Panel()
@@ -42,8 +41,7 @@ Partial Class Principal
         Me.btnAgregarUser = New Bunifu.Framework.UI.BunifuImageButton()
         Me.lblAmigos = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.btnPerfil = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.opnImg = New System.Windows.Forms.OpenFileDialog()
-        Me.btnCerrarSesion = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.btnCerrar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +51,6 @@ Partial Class Principal
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         Me.pnl1.SuspendLayout()
-        Me.pnlAmigos.SuspendLayout()
         Me.pnlConectados.SuspendLayout()
         CType(Me.btnRecargar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnAgregarUser, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,12 +143,14 @@ Partial Class Principal
         Me.btnCerrarVentana.TabStop = False
         Me.btnCerrarVentana.Zoom = 10
         '
-        'imgLstImagenes
+        'lstImagenes
         '
-        Me.imgLstImagenes.ImageStream = CType(resources.GetObject("imgLstImagenes.ImageStream"), System.Windows.Forms.ImageListStreamer)
-        Me.imgLstImagenes.TransparentColor = System.Drawing.Color.Transparent
-        Me.imgLstImagenes.Images.SetKeyName(0, "restore_window.png")
-        Me.imgLstImagenes.Images.SetKeyName(1, "maximize_Window.png")
+        Me.lstImagenes.ImageStream = CType(resources.GetObject("lstImagenes.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.lstImagenes.TransparentColor = System.Drawing.Color.Transparent
+        Me.lstImagenes.Images.SetKeyName(0, "restore_window.png")
+        Me.lstImagenes.Images.SetKeyName(1, "maximize_Window.png")
+        Me.lstImagenes.Images.SetKeyName(2, "user_H.png")
+        Me.lstImagenes.Images.SetKeyName(3, "user_M.png")
         '
         'SplitContainer1
         '
@@ -167,6 +166,10 @@ Partial Class Principal
         Me.SplitContainer1.Panel1.Controls.Add(Me.pnl1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.pnlConectados)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnPerfil)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Padding = New System.Windows.Forms.Padding(0, 0, 10, 10)
         Me.SplitContainer1.Size = New System.Drawing.Size(800, 550)
         Me.SplitContainer1.SplitterDistance = 230
         Me.SplitContainer1.TabIndex = 1
@@ -175,7 +178,7 @@ Partial Class Principal
         '
         Me.pnl1.AutoScroll = True
         Me.pnl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
-        Me.pnl1.Controls.Add(Me.btnCerrarSesion)
+        Me.pnl1.Controls.Add(Me.btnCerrar)
         Me.pnl1.Controls.Add(Me.pnlAmigos)
         Me.pnl1.Controls.Add(Me.txtBuscarUser)
         Me.pnl1.Controls.Add(Me.Separator)
@@ -192,48 +195,12 @@ Partial Class Principal
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pnlAmigos.AutoScroll = True
-        Me.pnlAmigos.Controls.Add(Me.btnAmigo)
         Me.pnlAmigos.Location = New System.Drawing.Point(5, 40)
         Me.pnlAmigos.Margin = New System.Windows.Forms.Padding(3, 10, 3, 50)
         Me.pnlAmigos.Name = "pnlAmigos"
         Me.pnlAmigos.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
         Me.pnlAmigos.Size = New System.Drawing.Size(220, 320)
         Me.pnlAmigos.TabIndex = 7
-        '
-        'btnAmigo
-        '
-        Me.btnAmigo.Activecolor = System.Drawing.Color.Silver
-        Me.btnAmigo.BackColor = System.Drawing.Color.White
-        Me.btnAmigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnAmigo.BorderRadius = 0
-        Me.btnAmigo.ButtonText = "Lupita"
-        Me.btnAmigo.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAmigo.DisabledColor = System.Drawing.Color.Gray
-        Me.btnAmigo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnAmigo.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnAmigo.Iconimage = CType(resources.GetObject("btnAmigo.Iconimage"), System.Drawing.Image)
-        Me.btnAmigo.Iconimage_right = CType(resources.GetObject("btnAmigo.Iconimage_right"), System.Drawing.Image)
-        Me.btnAmigo.Iconimage_right_Selected = Nothing
-        Me.btnAmigo.Iconimage_Selected = Nothing
-        Me.btnAmigo.IconMarginLeft = 0
-        Me.btnAmigo.IconMarginRight = 0
-        Me.btnAmigo.IconRightVisible = True
-        Me.btnAmigo.IconRightZoom = 0R
-        Me.btnAmigo.IconVisible = True
-        Me.btnAmigo.IconZoom = 80.0R
-        Me.btnAmigo.IsTab = False
-        Me.btnAmigo.Location = New System.Drawing.Point(0, 10)
-        Me.btnAmigo.Name = "btnAmigo"
-        Me.btnAmigo.Normalcolor = System.Drawing.Color.White
-        Me.btnAmigo.OnHovercolor = System.Drawing.Color.Silver
-        Me.btnAmigo.OnHoverTextColor = System.Drawing.Color.Black
-        Me.btnAmigo.selected = False
-        Me.btnAmigo.Size = New System.Drawing.Size(220, 50)
-        Me.btnAmigo.TabIndex = 0
-        Me.btnAmigo.Text = "Lupita"
-        Me.btnAmigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnAmigo.Textcolor = System.Drawing.Color.Black
-        Me.btnAmigo.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'txtBuscarUser
         '
@@ -365,41 +332,41 @@ Partial Class Principal
         Me.btnPerfil.Textcolor = System.Drawing.Color.White
         Me.btnPerfil.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'btnCerrarSesion
+        'btnCerrar
         '
-        Me.btnCerrarSesion.Activecolor = System.Drawing.Color.Silver
-        Me.btnCerrarSesion.BackColor = System.Drawing.Color.White
-        Me.btnCerrarSesion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnCerrarSesion.BorderRadius = 0
-        Me.btnCerrarSesion.ButtonText = "Cerrar Sesion"
-        Me.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCerrarSesion.DisabledColor = System.Drawing.Color.Gray
-        Me.btnCerrarSesion.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnCerrarSesion.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnCerrarSesion.Iconimage = Nothing
-        Me.btnCerrarSesion.Iconimage_right = Nothing
-        Me.btnCerrarSesion.Iconimage_right_Selected = Nothing
-        Me.btnCerrarSesion.Iconimage_Selected = Nothing
-        Me.btnCerrarSesion.IconMarginLeft = 0
-        Me.btnCerrarSesion.IconMarginRight = 0
-        Me.btnCerrarSesion.IconRightVisible = True
-        Me.btnCerrarSesion.IconRightZoom = 0R
-        Me.btnCerrarSesion.IconVisible = True
-        Me.btnCerrarSesion.IconZoom = 80.0R
-        Me.btnCerrarSesion.IsTab = False
-        Me.btnCerrarSesion.Location = New System.Drawing.Point(5, 373)
-        Me.btnCerrarSesion.Name = "btnCerrarSesion"
-        Me.btnCerrarSesion.Normalcolor = System.Drawing.Color.White
-        Me.btnCerrarSesion.OnHovercolor = System.Drawing.Color.Silver
-        Me.btnCerrarSesion.OnHoverTextColor = System.Drawing.Color.Black
-        Me.btnCerrarSesion.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.btnCerrarSesion.selected = False
-        Me.btnCerrarSesion.Size = New System.Drawing.Size(220, 32)
-        Me.btnCerrarSesion.TabIndex = 2
-        Me.btnCerrarSesion.Text = "Cerrar Sesion"
-        Me.btnCerrarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnCerrarSesion.Textcolor = System.Drawing.Color.Black
-        Me.btnCerrarSesion.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCerrar.Activecolor = System.Drawing.Color.Silver
+        Me.btnCerrar.BackColor = System.Drawing.Color.White
+        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnCerrar.BorderRadius = 0
+        Me.btnCerrar.ButtonText = "Cerrar Sesion"
+        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrar.DisabledColor = System.Drawing.Color.Gray
+        Me.btnCerrar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnCerrar.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnCerrar.Iconimage = Nothing
+        Me.btnCerrar.Iconimage_right = Nothing
+        Me.btnCerrar.Iconimage_right_Selected = Nothing
+        Me.btnCerrar.Iconimage_Selected = Nothing
+        Me.btnCerrar.IconMarginLeft = 0
+        Me.btnCerrar.IconMarginRight = 0
+        Me.btnCerrar.IconRightVisible = True
+        Me.btnCerrar.IconRightZoom = 0R
+        Me.btnCerrar.IconVisible = True
+        Me.btnCerrar.IconZoom = 80.0R
+        Me.btnCerrar.IsTab = False
+        Me.btnCerrar.Location = New System.Drawing.Point(5, 373)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Normalcolor = System.Drawing.Color.White
+        Me.btnCerrar.OnHovercolor = System.Drawing.Color.Silver
+        Me.btnCerrar.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.btnCerrar.selected = False
+        Me.btnCerrar.Size = New System.Drawing.Size(220, 32)
+        Me.btnCerrar.TabIndex = 8
+        Me.btnCerrar.Text = "Cerrar Sesion"
+        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnCerrar.Textcolor = System.Drawing.Color.Black
+        Me.btnCerrar.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'Principal
         '
@@ -427,7 +394,6 @@ Partial Class Principal
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.pnl1.ResumeLayout(False)
-        Me.pnlAmigos.ResumeLayout(False)
         Me.pnlConectados.ResumeLayout(False)
         CType(Me.btnRecargar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnAgregarUser, System.ComponentModel.ISupportInitialize).EndInit()
@@ -439,7 +405,7 @@ Partial Class Principal
     Friend WithEvents btnCerrarVentana As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnMinimizar As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnMaximizar As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents imgLstImagenes As ImageList
+    Friend WithEvents lstImagenes As ImageList
     Friend WithEvents lblTitulo As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents imgLogo As PictureBox
     Friend WithEvents SplitContainer1 As SplitContainer
@@ -452,7 +418,5 @@ Partial Class Principal
     Friend WithEvents txtBuscarUser As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents pnlAmigos As Panel
     Friend WithEvents btnRecargar As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents btnAmigo As Bunifu.Framework.UI.BunifuFlatButton
-    Friend WithEvents opnImg As OpenFileDialog
-    Friend WithEvents btnCerrarSesion As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents btnCerrar As Bunifu.Framework.UI.BunifuFlatButton
 End Class

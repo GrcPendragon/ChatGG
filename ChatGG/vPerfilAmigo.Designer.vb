@@ -28,6 +28,7 @@ Partial Class vPerfilAmigo
         Me.btnMinimizar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnCerrarVentana = New Bunifu.Framework.UI.BunifuImageButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.lblGenero = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.imgAvatar = New System.Windows.Forms.PictureBox()
         Me.lblNombreCompleto = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.lblUser = New Bunifu.Framework.UI.BunifuCustomLabel()
@@ -60,10 +61,10 @@ Partial Class vPerfilAmigo
         Me.lblTitulo.ForeColor = System.Drawing.Color.White
         Me.lblTitulo.Location = New System.Drawing.Point(0, 0)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(58, 50)
+        Me.lblTitulo.Size = New System.Drawing.Size(153, 50)
         Me.lblTitulo.TabIndex = 1
         Me.lblTitulo.Text = "Perfil"
-        Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnMinimizar
         '
@@ -100,6 +101,7 @@ Partial Class vPerfilAmigo
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.lblGenero)
         Me.Panel1.Controls.Add(Me.imgAvatar)
         Me.Panel1.Controls.Add(Me.lblNombreCompleto)
         Me.Panel1.Controls.Add(Me.lblUser)
@@ -110,9 +112,21 @@ Partial Class vPerfilAmigo
         Me.Panel1.Size = New System.Drawing.Size(400, 150)
         Me.Panel1.TabIndex = 4
         '
+        'lblGenero
+        '
+        Me.lblGenero.AutoSize = True
+        Me.lblGenero.BackColor = System.Drawing.Color.White
+        Me.lblGenero.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblGenero.Location = New System.Drawing.Point(120, 54)
+        Me.lblGenero.Name = "lblGenero"
+        Me.lblGenero.Size = New System.Drawing.Size(69, 21)
+        Me.lblGenero.TabIndex = 35
+        Me.lblGenero.Text = "Genero:"
+        '
         'imgAvatar
         '
-        Me.imgAvatar.Image = CType(resources.GetObject("imgAvatar.Image"), System.Drawing.Image)
+        Me.imgAvatar.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.imgAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.imgAvatar.Location = New System.Drawing.Point(34, 25)
         Me.imgAvatar.Name = "imgAvatar"
         Me.imgAvatar.Size = New System.Drawing.Size(80, 80)
@@ -125,22 +139,21 @@ Partial Class vPerfilAmigo
         Me.lblNombreCompleto.AutoSize = True
         Me.lblNombreCompleto.BackColor = System.Drawing.Color.White
         Me.lblNombreCompleto.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblNombreCompleto.Location = New System.Drawing.Point(120, 65)
+        Me.lblNombreCompleto.Location = New System.Drawing.Point(120, 25)
         Me.lblNombreCompleto.Name = "lblNombreCompleto"
-        Me.lblNombreCompleto.Size = New System.Drawing.Size(144, 21)
+        Me.lblNombreCompleto.Size = New System.Drawing.Size(0, 21)
         Me.lblNombreCompleto.TabIndex = 29
-        Me.lblNombreCompleto.Text = "Ximena Contreras"
         '
         'lblUser
         '
         Me.lblUser.AutoSize = True
         Me.lblUser.BackColor = System.Drawing.Color.White
         Me.lblUser.Font = New System.Drawing.Font("Franklin Gothic Book", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUser.Location = New System.Drawing.Point(32, 108)
+        Me.lblUser.Location = New System.Drawing.Point(120, 84)
         Me.lblUser.Name = "lblUser"
-        Me.lblUser.Size = New System.Drawing.Size(82, 21)
+        Me.lblUser.Size = New System.Drawing.Size(73, 21)
         Me.lblUser.TabIndex = 26
-        Me.lblUser.Text = "#MiNovia"
+        Me.lblUser.Text = "Usuario:"
         '
         'btnEliminar
         '
@@ -208,4 +221,5 @@ Partial Class vPerfilAmigo
     Friend WithEvents lblUser As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents btnEliminar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents imgAvatar As PictureBox
+    Friend WithEvents lblGenero As Bunifu.Framework.UI.BunifuCustomLabel
 End Class

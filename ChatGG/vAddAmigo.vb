@@ -20,7 +20,6 @@
                 sql = "Select * from contactos where user = " + user.ToString + " And amigoDe = " + idAmigo.ToString + " Or user = " + idAmigo.ToString + " And amigoDe = " + user.ToString
                 tabla = bd.seleccionar(sql)
                 If tabla.Rows.Count = 0 Then
-
                     sql = "Insert into contactos values (''," + user.ToString + "," + idAmigo.ToString + ")"
                     bd.insertar(sql)
                     Me.DialogResult = vbOK

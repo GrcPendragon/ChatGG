@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class vMiPerfil
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class vMiPerfil
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vMiPerfil))
         Me.pnlSuperior = New System.Windows.Forms.Panel()
@@ -34,16 +34,18 @@ Partial Class vMiPerfil
         Me.txtApellidos = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.BunifuCustomLabel1 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.txtNombre = New Bunifu.Framework.UI.BunifuMetroTextbox()
-        Me.btnAvatar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.btnGuardar = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.opnImg = New System.Windows.Forms.OpenFileDialog()
+        Me.imgAvatar = New System.Windows.Forms.PictureBox()
+        Me.BunifuCustomLabel5 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.rdbHombre = New System.Windows.Forms.RadioButton()
+        Me.rdbMujer = New System.Windows.Forms.RadioButton()
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.btnAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.imgAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlSuperior
@@ -107,13 +109,16 @@ Partial Class vMiPerfil
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.rdbMujer)
+        Me.Panel1.Controls.Add(Me.rdbHombre)
+        Me.Panel1.Controls.Add(Me.BunifuCustomLabel5)
+        Me.Panel1.Controls.Add(Me.imgAvatar)
         Me.Panel1.Controls.Add(Me.BunifuCustomLabel4)
         Me.Panel1.Controls.Add(Me.txtPass)
         Me.Panel1.Controls.Add(Me.BunifuCustomLabel2)
         Me.Panel1.Controls.Add(Me.txtApellidos)
         Me.Panel1.Controls.Add(Me.BunifuCustomLabel1)
         Me.Panel1.Controls.Add(Me.txtNombre)
-        Me.Panel1.Controls.Add(Me.btnAvatar)
         Me.Panel1.Controls.Add(Me.BunifuCustomLabel3)
         Me.Panel1.Controls.Add(Me.txtUser)
         Me.Panel1.Controls.Add(Me.btnGuardar)
@@ -210,27 +215,6 @@ Partial Class vMiPerfil
         Me.txtNombre.TabIndex = 28
         Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'btnAvatar
-        '
-        Me.btnAvatar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAvatar.BackColor = System.Drawing.Color.White
-        Me.btnAvatar.BackgroundImage = CType(resources.GetObject("btnAvatar.BackgroundImage"), System.Drawing.Image)
-        Me.btnAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btnAvatar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAvatar.Image = CType(resources.GetObject("btnAvatar.Image"), System.Drawing.Image)
-        Me.btnAvatar.ImageActive = Nothing
-        Me.btnAvatar.InitialImage = Nothing
-        Me.btnAvatar.Location = New System.Drawing.Point(34, 25)
-        Me.btnAvatar.Margin = New System.Windows.Forms.Padding(25, 25, 3, 20)
-        Me.btnAvatar.Name = "btnAvatar"
-        Me.btnAvatar.Size = New System.Drawing.Size(80, 80)
-        Me.btnAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.btnAvatar.TabIndex = 27
-        Me.btnAvatar.TabStop = False
-        Me.btnAvatar.Zoom = 10
-        '
         'BunifuCustomLabel3
         '
         Me.BunifuCustomLabel3.AutoSize = True
@@ -298,10 +282,53 @@ Partial Class vMiPerfil
         Me.btnGuardar.Textcolor = System.Drawing.Color.White
         Me.btnGuardar.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'opnImg
+        'imgAvatar
         '
-        Me.opnImg.Filter = "Imagenes JPG|*.jpg|Imagenes PNG|*.png"
-        Me.opnImg.Title = "Cargar imagen"
+        Me.imgAvatar.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.imgAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.imgAvatar.Location = New System.Drawing.Point(34, 25)
+        Me.imgAvatar.Name = "imgAvatar"
+        Me.imgAvatar.Size = New System.Drawing.Size(80, 80)
+        Me.imgAvatar.TabIndex = 34
+        Me.imgAvatar.TabStop = False
+        '
+        'BunifuCustomLabel5
+        '
+        Me.BunifuCustomLabel5.AutoSize = True
+        Me.BunifuCustomLabel5.BackColor = System.Drawing.Color.White
+        Me.BunifuCustomLabel5.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(123, 25)
+        Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
+        Me.BunifuCustomLabel5.Size = New System.Drawing.Size(52, 15)
+        Me.BunifuCustomLabel5.TabIndex = 35
+        Me.BunifuCustomLabel5.Text = "Genero:"
+        '
+        'rdbHombre
+        '
+        Me.rdbHombre.AutoSize = True
+        Me.rdbHombre.BackColor = System.Drawing.Color.Transparent
+        Me.rdbHombre.Checked = True
+        Me.rdbHombre.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbHombre.Location = New System.Drawing.Point(181, 19)
+        Me.rdbHombre.Name = "rdbHombre"
+        Me.rdbHombre.Size = New System.Drawing.Size(35, 21)
+        Me.rdbHombre.TabIndex = 36
+        Me.rdbHombre.TabStop = True
+        Me.rdbHombre.Text = "H"
+        Me.rdbHombre.UseVisualStyleBackColor = False
+        '
+        'rdbMujer
+        '
+        Me.rdbMujer.AutoSize = True
+        Me.rdbMujer.BackColor = System.Drawing.Color.Transparent
+        Me.rdbMujer.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbMujer.Location = New System.Drawing.Point(222, 19)
+        Me.rdbMujer.Name = "rdbMujer"
+        Me.rdbMujer.Size = New System.Drawing.Size(38, 21)
+        Me.rdbMujer.TabIndex = 37
+        Me.rdbMujer.TabStop = True
+        Me.rdbMujer.Text = "M"
+        Me.rdbMujer.UseVisualStyleBackColor = False
         '
         'vMiPerfil
         '
@@ -320,7 +347,7 @@ Partial Class vMiPerfil
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.btnAvatar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.imgAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -334,11 +361,13 @@ Partial Class vMiPerfil
     Friend WithEvents txtApellidos As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents BunifuCustomLabel1 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents txtNombre As Bunifu.Framework.UI.BunifuMetroTextbox
-    Friend WithEvents btnAvatar As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents BunifuCustomLabel3 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents txtUser As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents btnGuardar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuCustomLabel4 As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents txtPass As Bunifu.Framework.UI.BunifuMetroTextbox
-    Friend WithEvents opnImg As OpenFileDialog
+    Friend WithEvents rdbMujer As RadioButton
+    Friend WithEvents rdbHombre As RadioButton
+    Friend WithEvents BunifuCustomLabel5 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents imgAvatar As PictureBox
 End Class

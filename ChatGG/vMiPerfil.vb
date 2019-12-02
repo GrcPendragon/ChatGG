@@ -2,7 +2,7 @@
     Private px, py As Integer
     Private mover As Boolean = False
     Dim cargo As Boolean = False
-    Dim ruta As String
+    Dim genero As String
     Private bd As New Consulta
     Private tabla As DataTable
     Public user, pass As String
@@ -14,14 +14,18 @@
         Me.tabla = tabla
     End Sub
     Private Sub vMiPerfil_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Dim ventana As New Principal
         txtNombre.Text = tabla(0).Item(1)
         txtApellidos.Text = tabla(0).Item(2)
         txtUser.Text = tabla(0).Item(3)
         txtPass.Text = tabla(0).Item(4)
-        ruta = tabla(0).Item(5).ToString.Replace("|", "\")
-        btnAvatar.Image = Image.FromFile(ruta)
-        ruta = tabla(0).Item(5).ToString.Replace("\", "|")
+        genero = tabla(0).Item(5).ToString
+        imgAvatar.Image = ventana.lstImagenes.Images(Convert.ToInt32(genero))
+        If genero = "2" Then
+            rdbHombre.Checked = True
+        Else
+            rdbMujer.Checked = True
+        End If
         cargo = True
     End Sub
     Private Sub txtNombre_OnValueChanged(sender As Object, e As EventArgs) Handles txtNombre.OnValueChanged
@@ -43,27 +47,18 @@
     End Sub
     Private Sub txtPass_OnValueChanged(sender As Object, e As EventArgs) Handles txtPass.OnValueChanged
         If cargo Then
-
             btnGuardar.Enabled = True
         End If
     End Sub
-
-    Private Sub btnAvatar_Click(sender As Object, e As EventArgs) Handles btnAvatar.Click
-        If opnImg.ShowDialog = vbOK Then
-            If opnImg.FileName <> "" Then
-                Dim rutaDefault As String = "C:\ChatGG\fotos\#"
-                ruta = opnImg.FileName
-                btnAvatar.Image = Image.FromFile(ruta)
-                btnAvatar.Image.Save(rutaDefault & txtUser.Text & ".jpg")
-                ruta = (rutaDefault & txtUser.Text & ".jpg").ToString.Replace("|", "\")
-                btnAvatar.BackgroundImage = Nothing
-            Else
-                MsgBox("No seleccionó ninguna imagen")
-            End If
+    Private Sub rdbHombre_CheckedChanged(sender As Object, e As EventArgs) Handles rdbHombre.CheckedChanged
+        Dim ventana As New Principal
+        If rdbHombre.Checked Then
+            imgAvatar.Image = ventana.lstImagenes.Images(2)
+            genero = "2"
+        Else
+            imgAvatar.Image = ventana.lstImagenes.Images(3)
+            genero = "3"
         End If
-    End Sub
-
-    Private Sub btnAvatar_BackgroundImageChanged(sender As Object, e As EventArgs) Handles btnAvatar.BackgroundImageChanged
         If cargo Then
             btnGuardar.Enabled = True
         End If
@@ -76,7 +71,7 @@
             txtPass.Text = Encriptar(txtPass.Text, "Lupe", False)
         End If
         pass = txtPass.Text
-        sql = "Update user Set nombre = '" + txtNombre.Text + "', apellidos = '" + txtApellidos.Text + "', user = '" + txtUser.Text + "', pass = '" + pass + "', avatar = '" + ruta + "' Where id = " & id
+        sql = "Update user Set nombre = '" + txtNombre.Text + "', apellidos = '" + txtApellidos.Text + "', user = '" + txtUser.Text + "', pass = '" + pass + "', genero = '" + genero + "' Where id = " & id
         bd.actualizar(sql)
         user = txtUser.Text
         Me.DialogResult = vbOK

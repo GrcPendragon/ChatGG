@@ -22,14 +22,18 @@ Partial Class vRegistro
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vRegistro))
         Me.pnlSuperior = New System.Windows.Forms.Panel()
         Me.lblTitulo = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.btnMinimizar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnCerrarVentana = New Bunifu.Framework.UI.BunifuImageButton()
-        Me.btnAvatar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnRegistrar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.MetroPanel1 = New MetroFramework.Controls.MetroPanel()
+        Me.imgAvatar = New System.Windows.Forms.PictureBox()
+        Me.rdbMujer = New System.Windows.Forms.RadioButton()
+        Me.rdbHombre = New System.Windows.Forms.RadioButton()
+        Me.BunifuCustomLabel6 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel5 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel4 = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.BunifuCustomLabel3 = New Bunifu.Framework.UI.BunifuCustomLabel()
@@ -40,13 +44,12 @@ Partial Class vRegistro
         Me.txtUser = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtApellidos = New Bunifu.Framework.UI.BunifuMetroTextbox()
         Me.txtNombre = New Bunifu.Framework.UI.BunifuMetroTextbox()
-        Me.opnImagen = New System.Windows.Forms.OpenFileDialog()
-        Me.savImg = New System.Windows.Forms.SaveFileDialog()
+        Me.lstImage = New System.Windows.Forms.ImageList(Me.components)
         Me.pnlSuperior.SuspendLayout()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MetroPanel1.SuspendLayout()
+        CType(Me.imgAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlSuperior
@@ -107,26 +110,6 @@ Partial Class vRegistro
         Me.btnCerrarVentana.TabStop = False
         Me.btnCerrarVentana.Zoom = 10
         '
-        'btnAvatar
-        '
-        Me.btnAvatar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAvatar.BackColor = System.Drawing.Color.White
-        Me.btnAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.btnAvatar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAvatar.Image = CType(resources.GetObject("btnAvatar.Image"), System.Drawing.Image)
-        Me.btnAvatar.ImageActive = Nothing
-        Me.btnAvatar.InitialImage = Nothing
-        Me.btnAvatar.Location = New System.Drawing.Point(125, 50)
-        Me.btnAvatar.Margin = New System.Windows.Forms.Padding(3, 3, 3, 20)
-        Me.btnAvatar.Name = "btnAvatar"
-        Me.btnAvatar.Size = New System.Drawing.Size(80, 80)
-        Me.btnAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.btnAvatar.TabIndex = 3
-        Me.btnAvatar.TabStop = False
-        Me.btnAvatar.Zoom = 10
-        '
         'btnRegistrar
         '
         Me.btnRegistrar.Activecolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(170, Byte), Integer), CType(CType(200, Byte), Integer))
@@ -150,7 +133,7 @@ Partial Class vRegistro
         Me.btnRegistrar.IconVisible = True
         Me.btnRegistrar.IconZoom = 90.0R
         Me.btnRegistrar.IsTab = False
-        Me.btnRegistrar.Location = New System.Drawing.Point(125, 443)
+        Me.btnRegistrar.Location = New System.Drawing.Point(125, 458)
         Me.btnRegistrar.Name = "btnRegistrar"
         Me.btnRegistrar.Normalcolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.btnRegistrar.OnHovercolor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(255, Byte), Integer))
@@ -165,6 +148,10 @@ Partial Class vRegistro
         '
         'MetroPanel1
         '
+        Me.MetroPanel1.Controls.Add(Me.imgAvatar)
+        Me.MetroPanel1.Controls.Add(Me.rdbMujer)
+        Me.MetroPanel1.Controls.Add(Me.rdbHombre)
+        Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel6)
         Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel5)
         Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel4)
         Me.MetroPanel1.Controls.Add(Me.BunifuCustomLabel3)
@@ -176,7 +163,6 @@ Partial Class vRegistro
         Me.MetroPanel1.Controls.Add(Me.txtApellidos)
         Me.MetroPanel1.Controls.Add(Me.txtNombre)
         Me.MetroPanel1.Controls.Add(Me.btnRegistrar)
-        Me.MetroPanel1.Controls.Add(Me.btnAvatar)
         Me.MetroPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MetroPanel1.HorizontalScrollbarBarColor = True
         Me.MetroPanel1.HorizontalScrollbarHighlightOnWheel = False
@@ -190,12 +176,63 @@ Partial Class vRegistro
         Me.MetroPanel1.VerticalScrollbarHighlightOnWheel = False
         Me.MetroPanel1.VerticalScrollbarSize = 10
         '
+        'imgAvatar
+        '
+        Me.imgAvatar.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
+        Me.imgAvatar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.imgAvatar.Image = CType(resources.GetObject("imgAvatar.Image"), System.Drawing.Image)
+        Me.imgAvatar.Location = New System.Drawing.Point(125, 50)
+        Me.imgAvatar.Name = "imgAvatar"
+        Me.imgAvatar.Size = New System.Drawing.Size(80, 80)
+        Me.imgAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.imgAvatar.TabIndex = 27
+        Me.imgAvatar.TabStop = False
+        '
+        'rdbMujer
+        '
+        Me.rdbMujer.AutoSize = True
+        Me.rdbMujer.BackColor = System.Drawing.Color.Transparent
+        Me.rdbMujer.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.rdbMujer.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbMujer.Location = New System.Drawing.Point(232, 150)
+        Me.rdbMujer.Name = "rdbMujer"
+        Me.rdbMujer.Size = New System.Drawing.Size(44, 22)
+        Me.rdbMujer.TabIndex = 26
+        Me.rdbMujer.TabStop = True
+        Me.rdbMujer.Text = "M"
+        Me.rdbMujer.UseVisualStyleBackColor = False
+        '
+        'rdbHombre
+        '
+        Me.rdbHombre.AutoSize = True
+        Me.rdbHombre.BackColor = System.Drawing.Color.Transparent
+        Me.rdbHombre.Checked = True
+        Me.rdbHombre.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.rdbHombre.Font = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.rdbHombre.Location = New System.Drawing.Point(193, 150)
+        Me.rdbHombre.Name = "rdbHombre"
+        Me.rdbHombre.Size = New System.Drawing.Size(41, 22)
+        Me.rdbHombre.TabIndex = 25
+        Me.rdbHombre.TabStop = True
+        Me.rdbHombre.Text = "H"
+        Me.rdbHombre.UseVisualStyleBackColor = False
+        '
+        'BunifuCustomLabel6
+        '
+        Me.BunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent
+        Me.BunifuCustomLabel6.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuCustomLabel6.Location = New System.Drawing.Point(53, 150)
+        Me.BunifuCustomLabel6.Name = "BunifuCustomLabel6"
+        Me.BunifuCustomLabel6.Size = New System.Drawing.Size(134, 15)
+        Me.BunifuCustomLabel6.TabIndex = 24
+        Me.BunifuCustomLabel6.Text = "Seleccione su genero:"
+        '
         'BunifuCustomLabel5
         '
         Me.BunifuCustomLabel5.AutoSize = True
         Me.BunifuCustomLabel5.BackColor = System.Drawing.Color.White
         Me.BunifuCustomLabel5.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(53, 150)
+        Me.BunifuCustomLabel5.Location = New System.Drawing.Point(53, 165)
         Me.BunifuCustomLabel5.Name = "BunifuCustomLabel5"
         Me.BunifuCustomLabel5.Size = New System.Drawing.Size(69, 15)
         Me.BunifuCustomLabel5.TabIndex = 21
@@ -206,7 +243,7 @@ Partial Class vRegistro
         Me.BunifuCustomLabel4.AutoSize = True
         Me.BunifuCustomLabel4.BackColor = System.Drawing.Color.White
         Me.BunifuCustomLabel4.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(53, 208)
+        Me.BunifuCustomLabel4.Location = New System.Drawing.Point(53, 223)
         Me.BunifuCustomLabel4.Name = "BunifuCustomLabel4"
         Me.BunifuCustomLabel4.Size = New System.Drawing.Size(72, 15)
         Me.BunifuCustomLabel4.TabIndex = 20
@@ -217,7 +254,7 @@ Partial Class vRegistro
         Me.BunifuCustomLabel3.AutoSize = True
         Me.BunifuCustomLabel3.BackColor = System.Drawing.Color.White
         Me.BunifuCustomLabel3.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(53, 266)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(53, 281)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(55, 15)
         Me.BunifuCustomLabel3.TabIndex = 19
@@ -228,7 +265,7 @@ Partial Class vRegistro
         Me.BunifuCustomLabel2.AutoSize = True
         Me.BunifuCustomLabel2.BackColor = System.Drawing.Color.White
         Me.BunifuCustomLabel2.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(53, 324)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(53, 339)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(79, 15)
         Me.BunifuCustomLabel2.TabIndex = 18
@@ -239,7 +276,7 @@ Partial Class vRegistro
         Me.BunifuCustomLabel1.AutoSize = True
         Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.White
         Me.BunifuCustomLabel1.Font = New System.Drawing.Font("Franklin Gothic Book", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(53, 382)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(53, 397)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(124, 15)
         Me.BunifuCustomLabel1.TabIndex = 17
@@ -256,7 +293,7 @@ Partial Class vRegistro
         Me.txtPassRepet.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPassRepet.ForeColor = System.Drawing.Color.Black
         Me.txtPassRepet.isPassword = True
-        Me.txtPassRepet.Location = New System.Drawing.Point(54, 401)
+        Me.txtPassRepet.Location = New System.Drawing.Point(54, 416)
         Me.txtPassRepet.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPassRepet.Name = "txtPassRepet"
         Me.txtPassRepet.Size = New System.Drawing.Size(242, 35)
@@ -274,7 +311,7 @@ Partial Class vRegistro
         Me.txtPass.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtPass.ForeColor = System.Drawing.Color.Black
         Me.txtPass.isPassword = True
-        Me.txtPass.Location = New System.Drawing.Point(54, 343)
+        Me.txtPass.Location = New System.Drawing.Point(54, 358)
         Me.txtPass.Margin = New System.Windows.Forms.Padding(4)
         Me.txtPass.Name = "txtPass"
         Me.txtPass.Size = New System.Drawing.Size(242, 35)
@@ -292,7 +329,7 @@ Partial Class vRegistro
         Me.txtUser.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtUser.ForeColor = System.Drawing.Color.Black
         Me.txtUser.isPassword = False
-        Me.txtUser.Location = New System.Drawing.Point(54, 285)
+        Me.txtUser.Location = New System.Drawing.Point(54, 300)
         Me.txtUser.Margin = New System.Windows.Forms.Padding(4)
         Me.txtUser.Name = "txtUser"
         Me.txtUser.Size = New System.Drawing.Size(242, 35)
@@ -310,7 +347,7 @@ Partial Class vRegistro
         Me.txtApellidos.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtApellidos.ForeColor = System.Drawing.Color.Black
         Me.txtApellidos.isPassword = False
-        Me.txtApellidos.Location = New System.Drawing.Point(54, 227)
+        Me.txtApellidos.Location = New System.Drawing.Point(54, 242)
         Me.txtApellidos.Margin = New System.Windows.Forms.Padding(4)
         Me.txtApellidos.Name = "txtApellidos"
         Me.txtApellidos.Size = New System.Drawing.Size(242, 35)
@@ -328,17 +365,19 @@ Partial Class vRegistro
         Me.txtNombre.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtNombre.ForeColor = System.Drawing.Color.Black
         Me.txtNombre.isPassword = False
-        Me.txtNombre.Location = New System.Drawing.Point(54, 169)
+        Me.txtNombre.Location = New System.Drawing.Point(54, 184)
         Me.txtNombre.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(242, 35)
         Me.txtNombre.TabIndex = 12
         Me.txtNombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
-        'opnImagen
+        'lstImage
         '
-        Me.opnImagen.Filter = "Imagenes JPG|*.jpg|Imagenes PNG|*.png"
-        Me.opnImagen.Title = "Seleccionar imagen"
+        Me.lstImage.ImageStream = CType(resources.GetObject("lstImage.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.lstImage.TransparentColor = System.Drawing.Color.Transparent
+        Me.lstImage.Images.SetKeyName(0, "user_H.png")
+        Me.lstImage.Images.SetKeyName(1, "user_M.png")
         '
         'vRegistro
         '
@@ -355,9 +394,9 @@ Partial Class vRegistro
         Me.pnlSuperior.ResumeLayout(False)
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.btnCerrarVentana, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MetroPanel1.ResumeLayout(False)
         Me.MetroPanel1.PerformLayout()
+        CType(Me.imgAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -366,7 +405,6 @@ Partial Class vRegistro
     Friend WithEvents lblTitulo As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents btnMinimizar As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnCerrarVentana As Bunifu.Framework.UI.BunifuImageButton
-    Friend WithEvents btnAvatar As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnRegistrar As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents MetroPanel1 As MetroFramework.Controls.MetroPanel
     Friend WithEvents txtNombre As Bunifu.Framework.UI.BunifuMetroTextbox
@@ -379,6 +417,9 @@ Partial Class vRegistro
     Friend WithEvents txtPass As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents txtUser As Bunifu.Framework.UI.BunifuMetroTextbox
     Friend WithEvents txtApellidos As Bunifu.Framework.UI.BunifuMetroTextbox
-    Friend WithEvents opnImagen As OpenFileDialog
-    Friend WithEvents savImg As SaveFileDialog
+    Friend WithEvents BunifuCustomLabel6 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents rdbMujer As RadioButton
+    Friend WithEvents rdbHombre As RadioButton
+    Friend WithEvents imgAvatar As PictureBox
+    Friend WithEvents lstImage As ImageList
 End Class
