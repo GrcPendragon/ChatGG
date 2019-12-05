@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class vChat
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,8 +20,9 @@ Partial Class vChat
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(vChat))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -32,6 +33,7 @@ Partial Class vChat
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.btnEnviar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.txtMensaje = New System.Windows.Forms.TextBox()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -167,6 +169,10 @@ Partial Class vChat
         Me.txtMensaje.Size = New System.Drawing.Size(611, 75)
         Me.txtMensaje.TabIndex = 0
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
         'vChat
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -201,4 +207,5 @@ Partial Class vChat
     Friend WithEvents imgAmigo As PictureBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents txtChat As RichTextBox
+    Friend WithEvents Timer1 As Timer
 End Class
