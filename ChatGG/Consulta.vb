@@ -11,6 +11,12 @@ Public Class Consulta
         conexion = New MySqlConnection(cadenaCon)
         adaptador = New MySqlDataAdapter
     End Sub
+    Sub abrirConexion()
+        conexion.OpenAsync()
+    End Sub
+    Sub cerrarConexion()
+        conexion.CloseAsync()
+    End Sub
     Sub insertar(sql As String)
         conexion.Open()
         adaptador.InsertCommand = conexion.CreateCommand
@@ -44,4 +50,21 @@ Public Class Consulta
         adaptador.DeleteCommand.ExecuteNonQuery()
         conexion.Close()
     End Sub
+    Sub insertChat(sql As String)
+
+        adaptador.InsertCommand = conexion.CreateCommand
+        adaptador.InsertCommand.CommandText = sql
+        adaptador.InsertCommand.ExecuteNonQuery()
+
+    End Sub
+    Function selectChat(sql As String) As DataTable
+        Dim tabla As New DataTable
+
+        adaptador.SelectCommand = conexion.CreateCommand
+        adaptador.SelectCommand.CommandText = sql
+        adaptador.SelectCommand.ExecuteNonQuery()
+        adaptador.Fill(tabla)
+        Return tabla
+
+    End Function
 End Class

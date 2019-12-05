@@ -1,4 +1,5 @@
-﻿Public Class Principal
+﻿Imports System.Threading
+Public Class Principal
     Private px, py As Integer
     Private mover As Boolean = False
     Private bd As New Consulta
