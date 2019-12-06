@@ -5,6 +5,7 @@ Public Class Principal
     Private bd As New Consulta
     Private sql As String
     Public user, amigo, idYo As String
+    Public finTablaAmigos As Integer
     Public tabla, tablaYo, tablaAmigos As New DataTable
     Friend WithEvents botones As Bunifu.Framework.UI.BunifuFlatButton
     Sub New()
@@ -25,6 +26,7 @@ Public Class Principal
             idYo = tablaYo(0).Item(0).ToString
             sql = "Select * From contactos Where user = " + idYo + " Or amigoDe = " + idYo
             tablaAmigos = bd.seleccionar(sql)
+            finTablaAmigos = tablaAmigos.Rows.Count
             For i = 0 To tablaAmigos.Rows.Count - 1
                 botones = New Bunifu.Framework.UI.BunifuFlatButton
                 If tablaAmigos(i).Item(1) = idYo Then
@@ -41,6 +43,31 @@ Public Class Principal
                 AddHandler botones.Click, AddressOf btnAmigo_Click
                 pnlAmigos.Controls.Add(botones)
             Next
+        End If
+        Timer1.Enabled = True
+    End Sub
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        sql = "Select * From contactos Where user = " + idYo + " Or amigoDe = " + idYo
+        tablaAmigos = bd.seleccionar(sql)
+        lblAmigos.Text = "Amigos: " + tablaAmigos.Rows.Count.ToString
+        If finTablaAmigos < tablaAmigos.Rows.Count Then
+            For i = finTablaAmigos To tablaAmigos.Rows.Count - 1
+                botones = New Bunifu.Framework.UI.BunifuFlatButton
+                If tablaAmigos(i).Item(1) = idYo Then
+                    sql = "Select * From user Where id = " + tablaAmigos(i).Item(2).ToString
+                Else
+                    sql = "Select * From user Where id = " + tablaAmigos(i).Item(1).ToString
+                End If
+                tabla = bd.seleccionar(sql)
+                botones.Text = tabla(0).Item(1) + " " + tabla(0).Item(2)
+                botones.Dock = DockStyle.Top
+                botones.Name = tabla(0).Item(3).ToString
+                valoresBtn(botones, tabla(0).Item(5).ToString)
+
+                AddHandler botones.Click, AddressOf btnAmigo_Click
+                pnlAmigos.Controls.Add(botones)
+            Next
+            finTablaAmigos = tablaAmigos.Rows.Count
         End If
     End Sub
     'Abrir Perfil
@@ -129,7 +156,6 @@ Public Class Principal
 
 
     End Sub
-
     Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
         If Me.WindowState = FormWindowState.Normal Then
 

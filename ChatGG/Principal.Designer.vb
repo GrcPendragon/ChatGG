@@ -33,15 +33,15 @@ Partial Class Principal
         Me.lstImagenes = New System.Windows.Forms.ImageList(Me.components)
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.pnl1 = New System.Windows.Forms.Panel()
+        Me.btnCerrar = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.pnlAmigos = New System.Windows.Forms.Panel()
-        Me.txtBuscarUser = New Bunifu.Framework.UI.BunifuMaterialTextbox()
         Me.Separator = New Bunifu.Framework.UI.BunifuSeparator()
         Me.pnlConectados = New System.Windows.Forms.Panel()
         Me.btnRecargar = New Bunifu.Framework.UI.BunifuImageButton()
         Me.btnAgregarUser = New Bunifu.Framework.UI.BunifuImageButton()
         Me.lblAmigos = New Bunifu.Framework.UI.BunifuCustomLabel()
         Me.btnPerfil = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.btnCerrar = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.pnlSuperior.SuspendLayout()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -180,7 +180,6 @@ Partial Class Principal
         Me.pnl1.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(221, Byte), Integer))
         Me.pnl1.Controls.Add(Me.btnCerrar)
         Me.pnl1.Controls.Add(Me.pnlAmigos)
-        Me.pnl1.Controls.Add(Me.txtBuscarUser)
         Me.pnl1.Controls.Add(Me.Separator)
         Me.pnl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnl1.Location = New System.Drawing.Point(0, 140)
@@ -189,38 +188,54 @@ Partial Class Principal
         Me.pnl1.Size = New System.Drawing.Size(230, 410)
         Me.pnl1.TabIndex = 3
         '
+        'btnCerrar
+        '
+        Me.btnCerrar.Activecolor = System.Drawing.Color.Silver
+        Me.btnCerrar.BackColor = System.Drawing.Color.White
+        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.btnCerrar.BorderRadius = 0
+        Me.btnCerrar.ButtonText = "Cerrar Sesion"
+        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCerrar.DisabledColor = System.Drawing.Color.Gray
+        Me.btnCerrar.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.btnCerrar.Iconcolor = System.Drawing.Color.Transparent
+        Me.btnCerrar.Iconimage = Nothing
+        Me.btnCerrar.Iconimage_right = Nothing
+        Me.btnCerrar.Iconimage_right_Selected = Nothing
+        Me.btnCerrar.Iconimage_Selected = Nothing
+        Me.btnCerrar.IconMarginLeft = 0
+        Me.btnCerrar.IconMarginRight = 0
+        Me.btnCerrar.IconRightVisible = True
+        Me.btnCerrar.IconRightZoom = 0R
+        Me.btnCerrar.IconVisible = True
+        Me.btnCerrar.IconZoom = 80.0R
+        Me.btnCerrar.IsTab = False
+        Me.btnCerrar.Location = New System.Drawing.Point(5, 373)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Normalcolor = System.Drawing.Color.White
+        Me.btnCerrar.OnHovercolor = System.Drawing.Color.Silver
+        Me.btnCerrar.OnHoverTextColor = System.Drawing.Color.Black
+        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
+        Me.btnCerrar.selected = False
+        Me.btnCerrar.Size = New System.Drawing.Size(220, 32)
+        Me.btnCerrar.TabIndex = 8
+        Me.btnCerrar.Text = "Cerrar Sesion"
+        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.btnCerrar.Textcolor = System.Drawing.Color.Black
+        Me.btnCerrar.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
         'pnlAmigos
         '
         Me.pnlAmigos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pnlAmigos.AutoScroll = True
-        Me.pnlAmigos.Location = New System.Drawing.Point(5, 40)
+        Me.pnlAmigos.Location = New System.Drawing.Point(5, 10)
         Me.pnlAmigos.Margin = New System.Windows.Forms.Padding(3, 10, 3, 50)
         Me.pnlAmigos.Name = "pnlAmigos"
         Me.pnlAmigos.Padding = New System.Windows.Forms.Padding(0, 10, 0, 0)
-        Me.pnlAmigos.Size = New System.Drawing.Size(220, 320)
+        Me.pnlAmigos.Size = New System.Drawing.Size(220, 350)
         Me.pnlAmigos.TabIndex = 7
-        '
-        'txtBuscarUser
-        '
-        Me.txtBuscarUser.Cursor = System.Windows.Forms.Cursors.IBeam
-        Me.txtBuscarUser.Dock = System.Windows.Forms.DockStyle.Top
-        Me.txtBuscarUser.Font = New System.Drawing.Font("Franklin Gothic Book", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBuscarUser.ForeColor = System.Drawing.Color.White
-        Me.txtBuscarUser.HintForeColor = System.Drawing.Color.White
-        Me.txtBuscarUser.HintText = "Buscar"
-        Me.txtBuscarUser.isPassword = False
-        Me.txtBuscarUser.LineFocusedColor = System.Drawing.Color.Silver
-        Me.txtBuscarUser.LineIdleColor = System.Drawing.Color.White
-        Me.txtBuscarUser.LineMouseHoverColor = System.Drawing.Color.Silver
-        Me.txtBuscarUser.LineThickness = 2
-        Me.txtBuscarUser.Location = New System.Drawing.Point(5, 10)
-        Me.txtBuscarUser.Margin = New System.Windows.Forms.Padding(0)
-        Me.txtBuscarUser.Name = "txtBuscarUser"
-        Me.txtBuscarUser.Size = New System.Drawing.Size(220, 30)
-        Me.txtBuscarUser.TabIndex = 6
-        Me.txtBuscarUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left
         '
         'Separator
         '
@@ -293,7 +308,7 @@ Partial Class Principal
         Me.lblAmigos.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.lblAmigos.Size = New System.Drawing.Size(125, 40)
         Me.lblAmigos.TabIndex = 0
-        Me.lblAmigos.Text = "Conectados: "
+        Me.lblAmigos.Text = "Amigos: "
         Me.lblAmigos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'btnPerfil
@@ -332,41 +347,9 @@ Partial Class Principal
         Me.btnPerfil.Textcolor = System.Drawing.Color.White
         Me.btnPerfil.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
-        'btnCerrar
+        'Timer1
         '
-        Me.btnCerrar.Activecolor = System.Drawing.Color.Silver
-        Me.btnCerrar.BackColor = System.Drawing.Color.White
-        Me.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnCerrar.BorderRadius = 0
-        Me.btnCerrar.ButtonText = "Cerrar Sesion"
-        Me.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCerrar.DisabledColor = System.Drawing.Color.Gray
-        Me.btnCerrar.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.btnCerrar.Iconcolor = System.Drawing.Color.Transparent
-        Me.btnCerrar.Iconimage = Nothing
-        Me.btnCerrar.Iconimage_right = Nothing
-        Me.btnCerrar.Iconimage_right_Selected = Nothing
-        Me.btnCerrar.Iconimage_Selected = Nothing
-        Me.btnCerrar.IconMarginLeft = 0
-        Me.btnCerrar.IconMarginRight = 0
-        Me.btnCerrar.IconRightVisible = True
-        Me.btnCerrar.IconRightZoom = 0R
-        Me.btnCerrar.IconVisible = True
-        Me.btnCerrar.IconZoom = 80.0R
-        Me.btnCerrar.IsTab = False
-        Me.btnCerrar.Location = New System.Drawing.Point(5, 373)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Normalcolor = System.Drawing.Color.White
-        Me.btnCerrar.OnHovercolor = System.Drawing.Color.Silver
-        Me.btnCerrar.OnHoverTextColor = System.Drawing.Color.Black
-        Me.btnCerrar.Padding = New System.Windows.Forms.Padding(0, 5, 0, 0)
-        Me.btnCerrar.selected = False
-        Me.btnCerrar.Size = New System.Drawing.Size(220, 32)
-        Me.btnCerrar.TabIndex = 8
-        Me.btnCerrar.Text = "Cerrar Sesion"
-        Me.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.btnCerrar.Textcolor = System.Drawing.Color.Black
-        Me.btnCerrar.TextFont = New System.Drawing.Font("Franklin Gothic Book", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Timer1.Interval = 2000
         '
         'Principal
         '
@@ -415,8 +398,8 @@ Partial Class Principal
     Friend WithEvents lblAmigos As Bunifu.Framework.UI.BunifuCustomLabel
     Friend WithEvents pnl1 As Panel
     Friend WithEvents Separator As Bunifu.Framework.UI.BunifuSeparator
-    Friend WithEvents txtBuscarUser As Bunifu.Framework.UI.BunifuMaterialTextbox
     Friend WithEvents pnlAmigos As Panel
     Friend WithEvents btnRecargar As Bunifu.Framework.UI.BunifuImageButton
     Friend WithEvents btnCerrar As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Timer1 As Timer
 End Class
