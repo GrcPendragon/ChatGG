@@ -56,7 +56,6 @@ Public Class vChat
             Next
             txtChat.SelectionStart = Len(txtChat.Text)
             txtChat.ScrollToCaret()
-            txtChat.Select()
             finTabla = tablaMensajes.Rows.Count - 1
         End If
 
